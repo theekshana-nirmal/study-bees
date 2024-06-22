@@ -41,6 +41,21 @@ body {
     background-color: var(--color-tertiary);
 }
 
+.how-it-works-section a{
+    font-size: 1.2rem;
+}
+
+.how-it-works-section a .icon-angle-double-right{
+    transition: ease-in-out 0.2s;
+}
+
+
+.how-it-works-section a:hover .icon-angle-double-right{
+    transition: ease-in-out 0.2s;
+    margin-left: 4px;
+}
+
+
 .how-it-works-section>.container {
     display: flex;
     flex-direction: column;
