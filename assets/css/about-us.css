@@ -1,0 +1,106 @@
+.section {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+}
+
+.about-us-main-section {
+    background-color: var(--color-tertiary);
+}
+
+.row-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.row-text p {
+    max-width: 1000px;
+}
+
+.cards {
+    z-index: -1;
+    display: grid;
+    /* Only place 2 cards per row*/
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.card {
+    flex-direction: row;
+    padding: 1rem 4rem 1rem 1rem;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.card>div {
+    text-align: left;
+}
+
+/* CONTACT US FORM */
+.contact-us-section {
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: 700px;
+}
+
+form .input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: solid 2px #523e0030;
+    border-radius: 0.5rem;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+textarea{
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    border: solid 2px var(--color-primary);
+}
+
+form button {
+    border: none;
+    width: 100%;
+}
+
+form .txt-color-danger {
+    font-size: 1.2rem;
+}

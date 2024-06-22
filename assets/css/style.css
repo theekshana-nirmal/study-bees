@@ -1,0 +1,170 @@
+@import url(global.css);
+@import url(responsive.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(title-bar.css);
+@import url(../../assets/images/icons/css/study-bees-icons.css);
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* HERO SECTION */
+.hero-section{
+    min-height: 80vh;
+}
+.hero-section>.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-section .column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.hero-section .column-left>div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* HOW IT WORKS SECTION */
+.how-it-works-section {
+    min-height: 90vh;
+    background-color: var(--color-tertiary);
+}
+
+.how-it-works-section>.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.how-it-works-section .row-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-primary);
+}
+
+.how-it-works-section .row-top h1 {
+    text-align: center;
+    color: var(--color-light);
+    padding: 5rem 0;
+}
+
+.how-it-works-section .row-bottom {
+    display: flex;
+    gap: 2rem;
+}
+
+.how-it-works-section .row-bottom>.column-left {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.how-it-works-section .row-bottom>.column-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+}
+
+.how-it-works-section .row-bottom>.column-right>a {
+    color: var(--color-primary);
+}
+
+/* SUCCESS STORIES */
+.testimonials-section{
+    min-height: 90vh;
+}
+.testimonials-section .row-top {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials-section .row-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-section .carousel {
+    display: flex;
+    width: 100%;
+    min-height: 25rem;
+}
+
+.testimonials-section .btn-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.testimonials-section .cards {
+    display: flex;
+    flex: 6;
+    gap: 2rem;
+}
+
+.testimonials-section .cards>.card div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.testimonials-section .container {
+    padding-bottom: 6rem;
+}
+
+.testimonials-section .row-top {
+    padding: 5rem 0;
+}
+
+/* CALL TO ACTION SECTION */
+.cta-section {
+    background-color: var(--color-primary);
+}
+
+.cta-section .column-left>div>p {
+    color: var(--color-light);
+}
+
+.cta-section .column-left>div>h1 {
+    color: var(--color-light);
+}
+
+.cta-section>.container {
+    display: flex;
+    gap: 2rem;
+}
+
+.cta-section .column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cta-section .column-left>div {
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cta-section .column-left .btn-primary {
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    width: 50%;
+}

@@ -1,0 +1,17 @@
+.navbar-shadow{
+    position: sticky;
+    top: 0px;
+    background-color: var(--color-light);
+    box-shadow: var(--card-box-shadow);
+}
+
+header > .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}

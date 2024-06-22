@@ -1,0 +1,23 @@
+.title-row{
+
+    padding: 2rem 0;
+    background-color: var(--color-primary);
+}
+
+.title-row > .container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 1rem;
+
+}
+.title-row h1{
+    color: var(--color-light);
+    align-items: center;
+    justify-self: center;
+    grid-column: 2;
+}
+.icon-home{
+    font-size: 4rem;
+    color: var(--color-light);   
+}

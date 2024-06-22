@@ -1,0 +1,48 @@
+/* FOOTER BAR */
+footer{
+    background-color: var(--color-secondary);
+    padding-top: 2rem !important;
+}
+footer > .container > .row-top h1{
+    color: var(--color-light);
+}
+footer > .container > .row-top a{
+    color: var(--color-light);
+    transition: ease-in-out 0.2s;
+}
+footer > .container > .row-top a:hover{
+    color: var(--color-primary);
+    transition: ease-in-out 0.2s;
+}
+footer > .container > .row-bottom p{
+    color: var(--color-light);
+}
+footer > .container{
+    display: flex;
+    flex-direction: column;
+}
+footer .row-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+footer .row-bottom{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+footer .row-bottom > p{
+    font-size: 0.8rem;
+}
+footer .row-top > .column-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .row-top > .column-right > .footer-links{
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 2rem;
+}
