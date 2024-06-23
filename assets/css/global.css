@@ -5,15 +5,17 @@
     --color-tertiary: #FFFDED;
     --color-light: #FFFFFF;
     --color-danger: #EB5757;
+    --color-low: #523e0060;
 
     --font-size-title: 6rem;
     --font-size-sub-title: 1.5rem;
     --font-size-text: 1.1rem;
     --font-size-logo-small: 3rem;
     --font-size-logo-large: 4rem;
+    --font-size-label: 1rem;
 
     --btn-border-radius: 30px;
-    --btn-padding: 0.8rem 2rem;
+    --btn-padding: 0.6rem 2rem;
 
     --card-box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
     --card-border-radius: 15px;
@@ -46,8 +48,14 @@ h2 {
     text-transform: uppercase;
 }
 
+h3 {
+    font-family: poppins-regular, Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-label);
+    color: var(--color-low);
+}
+
 hr{
-    border: solid 2px #523e001e;
+    border: solid 2px var(--color-low);
     width: 25%;
     height: 0.5;
 }
@@ -73,10 +81,19 @@ label {
 .btn-primary {
     padding: var(--btn-padding);
     color: var(--color-light);
+    border: solid 4px var(--color-primary);
     background-color: var(--color-primary);
     border-radius: var(--btn-border-radius);
     text-align: center;
     font-weight: bold;
+    transition: ease-in-out 0.2s;
+}
+
+.btn-primary:hover {
+    border: solid 4px var(--color-primary);
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    transition: ease-in-out 0.2s;
 }
 
 .btn-secondary {
@@ -92,6 +109,24 @@ label {
 
 .btn-secondary:hover {
     background-color: var(--color-primary);
+    color: var(--color-light);
+    transition: ease-in-out 0.2s;
+}
+
+.btn-danger {
+    padding: var(--btn-padding);
+    color: var(--color-light);
+    border: solid 4px var(--color-danger);
+    background-color: var(--color-danger);
+    border-radius: var(--btn-border-radius);
+    text-align: center;
+    font-weight: bold;
+    transition: ease-in-out 0.2s;
+}
+
+.btn-danger:hover {
+    background-color: #ed6868;
+    ;
     color: var(--color-light);
     transition: ease-in-out 0.2s;
 }
@@ -140,7 +175,6 @@ label {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
-    z-index: -10;
 }
 
 /* FORM COMPONENTS */
