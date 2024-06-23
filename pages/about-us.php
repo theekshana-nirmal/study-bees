@@ -112,7 +112,7 @@
             </div>
         </section>
     </div>
-
+    <hr>
     <!-- CONTACT US SECTION -->
     <div class="contact-us-section" id="contact-us">
         <div class="row-text">
@@ -140,6 +140,7 @@
     <!-- CALL TO ACTION SECTION -->
     <?php
     $cta_image_path = '../assets/images/home-cta.png';
+    $registration_page_path = 'register.php';
     include 'cta-section.php';
     ?>
 

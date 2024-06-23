@@ -8,7 +8,7 @@
                     Study Bees is here to help you find your perfect study partner. Join Study Bees today and unlock the power of collaborative learning.
                 </p>
             </div>
-            <a href="#" class="btn-primary">Join Now</a>
+            <a href="<?php echo htmlspecialchars($registration_page_path); ?>" class="btn-primary">Join Now</a>
         </div>
         <div class="column-right">
             <img src="<?php echo htmlspecialchars($cta_image_path); ?>" alt="CTA Section Image">

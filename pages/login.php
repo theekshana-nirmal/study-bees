@@ -9,7 +9,6 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/how-it-works.css">
 
     <title>Study Bees</title>
 </head>

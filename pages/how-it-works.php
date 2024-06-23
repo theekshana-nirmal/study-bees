@@ -87,6 +87,7 @@
     <!-- CALL TO ACTION SECTION -->
     <?php
     $cta_image_path = '../assets/images/home-cta.png';
+    $registration_page_path = 'register.php';
     include 'cta-section.php';
     ?>
 

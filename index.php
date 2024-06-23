@@ -16,18 +16,13 @@
 
 <body>
     <!-- NAVIGATION BAR -->
-    <header class="navbar-shadow">
-        <div class="container">
-            <div class="logo logo-s">
-                <img src="assets/images/logo/logo-primary.png" alt="LOGO" class="logo-small">
-                <h1>Study Bees</h1>
-            </div>
-            <nav>
-                <a href="#">Log in</a>
-                <a href="#" class="btn-primary">Register</a>
-            </nav>
-        </div>
-    </header>
+    <?php
+    $cta_image_path = 'assets/images/home-cta.png';
+    $registration_page_path = 'pages/register.php';
+    $login_page_path = 'pages/login.php';
+
+    include 'pages/header.php';
+    ?>
 
     <!-- HERO SECTION -->
     <section class="hero-section">

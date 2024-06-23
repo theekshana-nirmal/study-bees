@@ -1,0 +1,24 @@
+.registration-form-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: initial;
+    text-align: initial;
+    max-width: 700px;
+}
+
+form .selections{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
