@@ -13,6 +13,17 @@
     text-align: initial;
     max-width: 700px;
 }
+form .form-heading-text{
+    text-align: center;
+    color: #523e008e;
+}
+form .notice-normal{
+    background-color: var(--color-tertiary);
+    text-align: center;
+    color: var(--color-secondary);
+    border-radius: 5px;
+    padding: 1rem;
+}
 
 form .selections{
     display: grid;
@@ -21,4 +32,15 @@ form .selections{
     justify-content: center;
     align-items: center;
     padding: 2rem;
+}
+
+form .row-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+form button{
+    font-size: 1rem;
 }

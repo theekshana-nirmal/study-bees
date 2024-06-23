@@ -15,18 +15,13 @@
 
 <body>
     <!-- NAVIGATION BAR -->
-    <header class="navbar-shadow">
-        <div class="container">
-            <div class="logo logo-s">
-                <img src="../assets/images/logo/logo-primary.png" alt="LOGO" class="logo-small">
-                <h1>Study Bees</h1>
-            </div>
-            <nav>
-                <a href="#">Log in</a>
-                <a href="#" class="btn-primary">Log in</a>
-            </nav>
-        </div>
-    </header>
+    <?php
+    $navbar_logo_image_path = '../assets/images/logo/logo-primary.png';
+    $registration_page_path = 'register.php';
+    $login_page_path = 'login.php';
+
+    include 'header.php';
+    ?>
 
     <!-- TITLE SECTION -->
     <div class="title-row">
@@ -41,11 +36,6 @@
     
     <!-- Log in Form -->
 
-    <!-- CALL TO ACTION SECTION -->
-    <?php
-    $cta_image_path = '../assets/images/home-cta.png';
-    include 'cta-section.php';
-    ?>
 
     <!-- FOOTER BAR -->
     <?php

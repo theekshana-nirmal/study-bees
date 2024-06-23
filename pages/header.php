@@ -2,7 +2,7 @@
 <header class="navbar-shadow">
     <div class="container">
         <div class="logo logo-s">
-            <img src="assets/images/logo/logo-primary.png" alt="LOGO" class="logo-small">
+            <img src="<?php echo htmlspecialchars($navbar_logo_image_path); ?>" alt="LOGO" class="logo-small">
             <h1>Study Bees</h1>
         </div>
         <nav>

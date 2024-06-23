@@ -17,7 +17,7 @@
 <body>
     <!-- NAVIGATION BAR -->
     <?php
-    $cta_image_path = 'assets/images/home-cta.png';
+    $navbar_logo_image_path = 'assets/images/logo/logo-primary.png';
     $registration_page_path = 'pages/register.php';
     $login_page_path = 'pages/login.php';
 

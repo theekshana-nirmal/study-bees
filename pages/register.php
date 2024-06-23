@@ -16,18 +16,13 @@
 
 <body>
     <!-- NAVIGATION BAR -->
-    <header class="navbar-shadow">
-        <div class="container">
-            <div class="logo logo-s">
-                <img src="../assets/images/logo/logo-primary.png" alt="LOGO" class="logo-small">
-                <h1>Study Bees</h1>
-            </div>
-            <nav>
-                <a href="#">Log in</a>
-                <a href="#" class="btn-primary">Register</a>
-            </nav>
-        </div>
-    </header>
+    <?php
+    $navbar_logo_image_path = '../assets/images/logo/logo-primary.png';
+    $registration_page_path = 'register.php';
+    $login_page_path = 'login.php';
+
+    include 'header.php';
+    ?>
 
     <!-- TITLE SECTION -->
     <div class="title-row">
@@ -45,6 +40,8 @@
         <div class="container">
             <div class="card">
                 <form action="#" method="POST">
+                   <p class="form-heading-text">Register today to tap into a community of like-minded students ready to support you on your path to academic excellence! 🏆</p>
+                    <hr>
                     <div class="row-group">
                         <div class="input-group">
                             <label>First Name<span class="txt-color-danger">*</span></label>
@@ -88,6 +85,10 @@
                                 <label for="english">English Language</label>
                             </div>
                             <div class="subject-select-box">
+                                <input type="checkbox" id="ict" name="subjects[]" value="ICT">
+                                <label for="ict">ICT</label>
+                            </div>
+                            <div class="subject-select-box">
                                 <input type="checkbox" id="sinhala" name="subjects[]" value="Sinhala Language">
                                 <label for="sinhala">Sinhala Language</label>
                             </div>
@@ -111,14 +112,10 @@
                                 <input type="checkbox" id="civic" name="subjects[]" value="Civic Education">
                                 <label for="civic">Civic Education</label>
                             </div>
-                            <div class="subject-select-box">
-                                <input type="checkbox" id="ict" name="subjects[]" value="ICT">
-                                <label for="ict">ICT</label>
-                            </div>
                         </div>
                     </div>
                     <hr>
-                    <p><b>Note: </b>The subjects you do not mark as weak will be considered as your strong subjects. You can review and modify these selections at any time by editing your profile after registration.</p>
+                    <p class="notice-normal"><b>Note: </b>The subjects you do not mark as a weak subject will be considered as your strong subjects. You can review and modify these selections at any time by editing your profile after registration.</p>
                     <button type="submit" class="btn-primary">Create Account</button>
                     <p>Already have an account? <a href="login.php">Log in</a></p>
                 </form>
