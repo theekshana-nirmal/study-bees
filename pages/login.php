@@ -9,6 +9,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
 
     <title>Study Bees</title>
 </head>
@@ -35,7 +36,27 @@
     </div>
     
     <!-- Log in Form -->
-
+    <div class="form-wrapper">
+        <div class="container">
+            <div class="card">
+                <form action="#" method="POST">
+                   <p class="form-heading-text">Welcome back! Access your account to stay in touch with your study community. <br> Please enter your email and password to log in.</p>
+                    <hr>
+                    <div class="input-group">
+                        <label>Email<span class="txt-color-danger">*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password<span class="txt-color-danger">*</span></label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <p class="notice-normal"><b>Note: </b>If you experience any issues logging in, please ensure your email and password are correct or <a href="about-us.php#contact-us" class="txt-color-primary">contact</a> our support team for assistance.</p>
+                    <button type="submit" class="btn-primary">Log in</button>
+                    <p>Don't have an account? <a href="register.php" class="txt-color-primary">Register</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER BAR -->
     <?php

@@ -36,11 +36,11 @@
     </div>
 
     <!-- Registration Form -->
-    <div class="registration-form-section">
+    <div class="form-wrapper">
         <div class="container">
             <div class="card">
                 <form action="#" method="POST">
-                   <p class="form-heading-text">Register today to tap into a community of like-minded students ready to support you on your path to academic excellence! 🏆</p>
+                   <p class="form-heading-text">Register now to find study partners who need your help in your strong subjects and who can support you in your weak subjects! 🏆</p>
                     <hr>
                     <div class="row-group">
                         <div class="input-group">
@@ -117,7 +117,7 @@
                     <hr>
                     <p class="notice-normal"><b>Note: </b>The subjects you do not mark as a weak subject will be considered as your strong subjects. You can review and modify these selections at any time by editing your profile after registration.</p>
                     <button type="submit" class="btn-primary">Create Account</button>
-                    <p>Already have an account? <a href="login.php">Log in</a></p>
+                    <p>Already have an account? <a href="login.php" class="txt-color-primary">Log in</a></p>
                 </form>
             </div>
         </div>
