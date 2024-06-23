@@ -16,3 +16,25 @@ nav{
     align-items: center;
     gap: 2rem;
 }
+
+header .btn-primary{
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    border: solid 4px var(--color-primary);
+    transition: ease-in-out 0.2s;
+}
+
+header .btn-primary:hover{
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    border: solid 4px var(--color-primary);
+    transition: ease-in-out 0.2s;
+}
+header .login-link{
+    transition: ease-in-out 0.2s;
+}
+
+header .login-link:hover{
+    color: var(--color-primary);
+    transition: ease-in-out 0.2s;
+}
