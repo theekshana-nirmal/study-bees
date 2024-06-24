@@ -21,7 +21,7 @@
     $registration_page_path = 'register.php';
     $login_page_path = 'login.php';
 
-    include 'header.php';
+    include '../includes/header.php';
     ?>
 
     <!-- TITLE SECTION -->
@@ -50,7 +50,7 @@
                         <label>Password<span class="txt-color-danger">*</span></label>
                         <input type="password" name="password" required>
                     </div>
-                    <p class="notice-normal"><b>Note: </b>If you experience any issues logging in, please ensure your email and password are correct or <a href="about-us.php#contact-us" class="txt-color-primary">contact</a> our support team for assistance.</p>
+                    <p class="notice-normal"><b>Note: </b>If you experience any issues logging in, please ensure your email and password are correct or <a href="../pages/about-us.php#contact-us" class="txt-color-primary">contact</a> our support team for assistance.</p>
                     <button type="submit" class="btn-primary">Log in</button>
                     <p>Don't have an account? <a href="register.php" class="txt-color-primary">Register</a></p>
                 </form>
@@ -63,11 +63,11 @@
     $footer_logo_image_path = '../assets/images/logo/logo-light.png';
 
     $home_page_path = '../index.php';
-    $about_us_page_path = 'about-us.php';
-    $how_it_works_page_path = 'how-it-works.php';
-    $contact_us_page_path = 'about-us.php#contact-us';
+    $about_us_page_path = '../pages/about-us.php';
+    $how_it_works_page_path = '../pages/how-it-works.php';
+    $contact_us_page_path = '../pages/about-us.php#contact-us';
 
-    include 'footer.php';
+    include '../includes/footer.php';
     ?>
 </body>
 

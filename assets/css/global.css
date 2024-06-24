@@ -259,5 +259,5 @@ form .txt-color-danger {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-tertiary);
+    background: var(--color-primary);
 }

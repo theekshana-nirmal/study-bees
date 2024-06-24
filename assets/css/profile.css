@@ -94,8 +94,14 @@ header .profile-link h2{
     gap: 2rem;
 }
 
-.subject-group .group-title p{
-    font-weight: 300;
+.group-title{
+    width: 100%;
+    background-color: #f6f6f6;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+}
+.group-title p{
+    color: var(--color-secondary);
 }
 
 .subject-group .subjects{

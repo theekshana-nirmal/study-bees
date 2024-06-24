@@ -24,7 +24,7 @@
                 <h1>Study Bees</h1>
             </div>
             <nav>
-                <a href="login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
+                <a href="../auth/login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2>User Name</h2>
                     <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <!-- User Profile -->
+    <!-- Show Results -->
     <div class="study-buddies-page">
         <div class="container">
             <div class="study-buddies-layout">
@@ -115,7 +115,7 @@
                         <div class="card study-material">
                             <div class="material-details">
                                 <h2>Study Material Title</h2>
-                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum ut!</P>
+                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum</P>
                             </div>
                             <a href="#" target="_blank" class="btn-primary"><i class="icon-angle-double-right"></i></a>
                         </div>
@@ -123,7 +123,7 @@
                         <div class="card study-material">
                             <div class="material-details">
                                 <h2>Study Material Title</h2>
-                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum ut!</P>
+                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum</P>
                             </div>
                             <a href="#" target="_blank" class="btn-primary"><i class="icon-angle-double-right"></i></a>
                         </div>
@@ -131,7 +131,7 @@
                         <div class="card study-material">
                             <div class="material-details">
                                 <h2>Study Material Title</h2>
-                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum ut!</P>
+                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum</P>
                             </div>
                             <a href="#" target="_blank" class="btn-primary"><i class="icon-angle-double-right"></i></a>
                         </div>
@@ -146,11 +146,11 @@
     $footer_logo_image_path = '../assets/images/logo/logo-light.png';
 
     $home_page_path = '../index.php';
-    $about_us_page_path = 'about-us.php';
-    $how_it_works_page_path = '#';
-    $contact_us_page_path = 'about-us.php#contact-us';
+    $about_us_page_path = '../pages/about-us.php';
+    $how_it_works_page_path = '../pages/how-it-works.php';
+    $contact_us_page_path = '../pages/about-us.php#contact-us';
 
-    include 'footer.php';
+    include '../includes/footer.php';
     ?>
 </body>
 

@@ -18,10 +18,10 @@
     <!-- NAVIGATION BAR -->
     <?php
     $navbar_logo_image_path = '../assets/images/logo/logo-primary.png';
-    $registration_page_path = 'register.php';
-    $login_page_path = 'login.php';
+    $registration_page_path = '../auth/register.php';
+    $login_page_path = '../auth/login.php';
 
-    include 'header.php';
+    include '../includes/header.php';
     ?>
 
     <!-- TITLE SECTION -->
@@ -82,7 +82,7 @@
     <!-- CALL TO ACTION SECTION -->
     <?php
     $cta_image_path = '../assets/images/home-cta.png';
-    include 'cta-section.php';
+    include '../includes/cta-section.php';
     ?>
 
     <!-- FOOTER BAR -->
@@ -94,7 +94,7 @@
     $how_it_works_page_path = 'how-it-works.php';
     $contact_us_page_path = 'about-us.php#contact-us';
 
-    include 'footer.php';
+    include '../includes/footer.php';
     ?>
 </body>
 

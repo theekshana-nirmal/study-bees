@@ -21,7 +21,7 @@
     $registration_page_path = 'register.php';
     $login_page_path = 'login.php';
 
-    include 'header.php';
+    include '../includes/header.php';
     ?>
 
     <!-- TITLE SECTION -->
@@ -128,11 +128,11 @@
     $footer_logo_image_path = '../assets/images/logo/logo-light.png';
 
     $home_page_path = '../index.php';
-    $about_us_page_path = 'about-us.php';
-    $how_it_works_page_path = 'how-it-works.php';
-    $contact_us_page_path = 'about-us.php#contact-us';
+    $about_us_page_path = '../pages/about-us.php';
+    $how_it_works_page_path = '../pages/how-it-works.php';
+    $contact_us_page_path = '../pages/about-us.php#contact-us';
 
-    include 'footer.php';
+    include '../includes/footer.php';
     ?>
 </body>
 
