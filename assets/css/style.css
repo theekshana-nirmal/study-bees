@@ -126,6 +126,11 @@ body {
     align-items: center;
     flex: 1;
 }
+.btn-navigation a{
+    font-size: 4rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
 
 .testimonials-section .cards {
     display: flex;

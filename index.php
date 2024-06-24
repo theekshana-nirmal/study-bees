@@ -73,7 +73,7 @@
                 <div class="carousel">
                     <div class="btn-navigation">
                         <a>
-                            <img src="assets/images/carousel/prev-page.png" alt="Previous Button">
+                            <i class="icon-angle-circled-left" id="prev"></i>
                         </a>
                     </div>
                     <div class="cards">
@@ -107,7 +107,7 @@
                     </div>
                     <div class="btn-navigation">
                         <a>
-                            <img src="assets/images/carousel/next-page.png" alt="Previous Button">
+                            <i class="icon-angle-circled-right" id="next"></i>
                         </a>
                     </div>
                 </div>

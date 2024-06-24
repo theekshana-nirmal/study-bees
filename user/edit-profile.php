@@ -69,6 +69,10 @@
                 <!-- Right Column -->
                 <div class="edit-user-details-section">
                     <form action="#" method="POST" class="card">
+                        <div class="input-group">
+                            <label>Profile Picture</label>
+                            <input type="file" accept=".png, .jpeg, .jpg" name="profile-picture">
+                        </div>
                         <div class="row-group">
                             <div class="input-group">
                                 <label>First Name<span class="txt-color-danger">*</span></label>

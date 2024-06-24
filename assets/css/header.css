@@ -11,6 +11,10 @@ header > .container{
     justify-content: space-between;
 }
 
+header nav .btn-danger{
+    padding: 0.3rem 1rem;
+}
+
 nav{
     display: flex;
     align-items: center;
