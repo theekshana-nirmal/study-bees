@@ -115,6 +115,8 @@
         </div>
     </section>
 
+    <script src="assets/js/carousel.js"></script>
+
     <!-- CALL TO ACTION SECTION -->
     <?php
     $cta_image_path = 'assets/images/home-cta.png';

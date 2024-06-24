@@ -56,7 +56,7 @@
                     <div class="result-wrapper">
                         <!-- Results -->
                         <div class="card study-buddy">
-                            <img src="../assets/images/about-us/user1.png" alt="User Photo">
+                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
                             <div class="profile-details">
                                 <h2>User Name</h2>
                                 <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="card study-buddy">
-                            <img src="../assets/images/about-us/user1.png" alt="User Photo">
+                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
                             <div class="profile-details">
                                 <h2>User Name</h2>
                                 <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
@@ -72,7 +72,7 @@
                         </div>
 
                         <div class="card study-buddy">
-                            <img src="../assets/images/about-us/user1.png" alt="User Photo">
+                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
                             <div class="profile-details">
                                 <h2>User Name</h2>
                                 <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="card study-buddy">
-                            <img src="../assets/images/about-us/user1.png" alt="User Photo">
+                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
                             <div class="profile-details">
                                 <h2>User Name</h2>
                                 <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
@@ -88,7 +88,7 @@
                         </div>
 
                         <div class="card study-buddy">
-                            <img src="../assets/images/about-us/user1.png" alt="User Photo">
+                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
                             <div class="profile-details">
                                 <h2>User Name</h2>
                                 <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
@@ -96,7 +96,7 @@
                         </div>
 
                         <div class="card study-buddy">
-                            <img src="../assets/images/about-us/user1.png" alt="User Photo">
+                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
                             <div class="profile-details">
                                 <h2>User Name</h2>
                                 <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
