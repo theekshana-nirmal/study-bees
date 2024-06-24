@@ -23,7 +23,7 @@
                 <h1>Study Bees</h1>
             </div>
             <nav>
-                <a href="login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
+                <a href="../auth/login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2>User Name</h2>
                     <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
@@ -49,7 +49,7 @@
                         </div>
                         <div class="user-buttons">
                             <a href="edit-profile.php" class="btn-primary"><i class="icon-cog"></i> Edit Profile</a>
-                            <a href="login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
+                            <a href="../auth/login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                         </div>
                         <div class="user-contact-details">
                             <div class="user-email">
@@ -68,7 +68,7 @@
                     <!-- Weak Subjects -->
                     <div class="card subject-group">
                         <div class="group-title">
-                            <p>Your weak Subjects</p>
+                            <p>Weak Subjects</p>
                         </div>
                         <div class="subjects">
                             <a href="study-buddies.php" class="btn-primary">Subject Name</a>
@@ -82,7 +82,7 @@
                     <!-- Strong Subjects -->
                     <div class="card subject-group">
                         <div class="group-title">
-                            <p>Your strong Subjects</p>
+                            <p>Strong Subjects</p>
                         </div>
                         <div class="subjects">
                             <a href="study-buddies.php" class="btn-primary">Subject Name</a>
@@ -102,11 +102,11 @@
     $footer_logo_image_path = '../assets/images/logo/logo-light.png';
 
     $home_page_path = '../index.php';
-    $about_us_page_path = 'about-us.php';
-    $how_it_works_page_path = '#';
-    $contact_us_page_path = 'about-us.php#contact-us';
+    $about_us_page_path = '../pages/about-us.php';
+    $how_it_works_page_path = '../pages/how-it-works.php';
+    $contact_us_page_path = '../pages/about-us.php#contact-us';
 
-    include 'footer.php';
+    include '../includes/footer.php';
     ?>
 </body>
 

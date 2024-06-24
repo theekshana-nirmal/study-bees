@@ -1,0 +1,28 @@
+.edit-user-details-section{
+    display: flex;
+    flex: 2;
+}
+
+.edit-user-details-section .card{
+    text-align: left;
+}
+
+.button-group{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.button-group .btn-primary{
+    flex: 1;
+}
+
+.button-group .btn-primary:hover{
+    color: var(--color-light);
+    background-color: rgb(255, 199, 33);
+    border: solid 4px rgb(255, 199, 33);
+}
+
+.button-group .btn-secondary{
+    flex: 1;
+}

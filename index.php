@@ -18,10 +18,10 @@
     <!-- NAVIGATION BAR -->
     <?php
     $navbar_logo_image_path = 'assets/images/logo/logo-primary.png';
-    $registration_page_path = 'pages/register.php';
-    $login_page_path = 'pages/login.php';
+    $registration_page_path = 'auth/register.php';
+    $login_page_path = 'auth/login.php';
 
-    include 'pages/header.php';
+    include 'includes/header.php';
     ?>
 
     <!-- HERO SECTION -->
@@ -34,7 +34,7 @@
                         Study Bees is a platform designed to help students find study partners. Whether you're struggling with a difficult subject or simply want to collaborate with like-minded individuals, Study Bees is here to connect you with the right study partner. Our platform provides a safe and convenient way to find study buddies who can support and motivate you on your academic journey. Join Study Bees today and unlock the power of collaborative learning.
                     </p>
                 </div>
-                <a href="#" class="btn-secondary">Join Now</a>
+                <a href="auth/register.php" class="btn-secondary">Join Now</a>
             </div>
             <div class="column-right">
                 <img src="assets/images/home-1.png" alt="Hero Section Image">
@@ -73,7 +73,7 @@
                 <div class="carousel">
                     <div class="btn-navigation">
                         <a>
-                            <img src="assets/images/carousel/prev-page.png" alt="Previous Button">
+                            <i class="icon-angle-circled-left" id="prev"></i>
                         </a>
                     </div>
                     <div class="cards">
@@ -107,7 +107,7 @@
                     </div>
                     <div class="btn-navigation">
                         <a>
-                            <img src="assets/images/carousel/next-page.png" alt="Previous Button">
+                            <i class="icon-angle-circled-right" id="next"></i>
                         </a>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
     <!-- CALL TO ACTION SECTION -->
     <?php
     $cta_image_path = 'assets/images/home-cta.png';
-    include 'pages/cta-section.php';
+    include 'includes/cta-section.php';
     ?>
 
     <!-- FOOTER BAR -->
@@ -130,7 +130,7 @@
     $how_it_works_page_path = 'pages/how-it-works.php';
     $contact_us_page_path = 'pages/about-us.php#contact-us';
     
-    include 'pages/footer.php';
+    include 'includes/footer.php';
     ?>
 </body>
 
