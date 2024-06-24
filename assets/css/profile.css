@@ -10,6 +10,14 @@ header .profile-picture{
     border-radius: 50%;
 }
 
+header .profile-link h2{
+    font-size: 1rem;
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(35, 34, 27, 0.15) 0px 0px 0px 1px;
+}
+
 /* Profile Page layout design*/
 .profile-page .profile-page-layout{
     display: flex;
@@ -84,6 +92,10 @@ header .profile-picture{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.subject-group .group-title p{
+    font-weight: 300;
 }
 
 .subject-group .subjects{

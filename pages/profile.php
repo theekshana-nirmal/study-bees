@@ -68,7 +68,7 @@
                     <!-- Weak Subjects -->
                     <div class="card subject-group">
                         <div class="group-title">
-                            <p>Your weak Subjects</p>
+                            <p>Weak Subjects</p>
                         </div>
                         <div class="subjects">
                             <a href="study-buddies.php" class="btn-primary">Subject Name</a>
@@ -82,7 +82,7 @@
                     <!-- Strong Subjects -->
                     <div class="card subject-group">
                         <div class="group-title">
-                            <p>Your strong Subjects</p>
+                            <p>Strong Subjects</p>
                         </div>
                         <div class="subjects">
                             <a href="study-buddies.php" class="btn-primary">Subject Name</a>

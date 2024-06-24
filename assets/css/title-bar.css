@@ -17,7 +17,7 @@
     justify-self: center;
     grid-column: 2;
 }
-.icon-home{
-    font-size: 4rem;
+.icon-home, .icon-left-open{
+    font-size: 3rem;
     color: var(--color-light);   
 }

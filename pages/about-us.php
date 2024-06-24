@@ -143,7 +143,7 @@
     $footer_logo_image_path = '../assets/images/logo/logo-light.png';
 
     $home_page_path = '../index.php';
-    $about_us_page_path = '#';
+    $about_us_page_path = 'about-us.php';
     $how_it_works_page_path = 'how-it-works.php';
     $contact_us_page_path = '#contact-us';
 
