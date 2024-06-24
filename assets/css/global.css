@@ -89,6 +89,9 @@ label {
     text-align: center;
     font-weight: bold;
     transition: ease-in-out 0.2s;
+
+    display: flex;
+    justify-content: center;
 }
 
 .btn-primary:hover {
@@ -107,6 +110,9 @@ label {
     width: 50%;
     transition: ease-in-out 0.2s;
     font-weight: bold;
+
+    display: flex;
+    justify-content: center;
 }
 
 .btn-secondary:hover {
@@ -124,6 +130,9 @@ label {
     text-align: center;
     font-weight: bold;
     transition: ease-in-out 0.2s;
+
+    display: flex;
+    justify-content: center;
 }
 
 .btn-danger:hover {
