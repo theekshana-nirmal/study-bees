@@ -9,6 +9,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/carousel.css">
 
 
     <title>Study Bees</title>
@@ -69,47 +70,63 @@
                 <h1>Success Stories</h1>
             </div>
             <div class="row-bottom">
+
                 <!-- Carousel Goes Here-->
                 <div class="carousel">
-                    <div class="btn-navigation">
-                        <a>
-                            <i class="icon-angle-circled-left" id="prev"></i>
-                        </a>
-                    </div>
-                    <div class="cards">
-                        <div class="card">
-                            <img src="assets/images/carousel/user1.png" alt="User Photo">
-                            <div>
-                                <h2>User Name</h2>
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
-                                </p>
+                    <a class="prev">
+                        <i class="icon-angle-circled-left"></i>
+                    </a>
+                    <div class="carousel-track-container">
+                        <!-- Cards -->
+                        <div class="carousel-track">
+                            <!-- Card -->
+                            <div class="carousel-card card">
+                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <div>
+                                    <h2>User Name</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div class="carousel-card card">
+                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <div>
+                                    <h2>User Name</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div class="carousel-card card">
+                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <div>
+                                    <h2>User Name</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div class="carousel-card card">
+                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <div>
+                                    <h2>User Name</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="card">
-                            <img src="assets/images/carousel/user1.png" alt="User Photo">
-                            <div>
-                                <h2>User Name</h2>
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="assets/images/carousel/user1.png" alt="User Photo">
-                            <div>
-                                <h2>User Name</h2>
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
-                                </p>
-                            </div>
-                        </div>
                     </div>
-                    <div class="btn-navigation">
-                        <a>
-                            <i class="icon-angle-circled-right" id="next"></i>
-                        </a>
-                    </div>
+                    <a class="next">
+                        <i class="icon-angle-circled-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -126,12 +143,12 @@
     <!-- FOOTER BAR -->
     <?php
     $footer_logo_image_path = 'assets/images/logo/logo-light.png';
-    
+
     $home_page_path = 'index.php';
     $about_us_page_path = 'pages/about-us.php';
     $how_it_works_page_path = 'pages/how-it-works.php';
     $contact_us_page_path = 'pages/about-us.php#contact-us';
-    
+
     include 'includes/footer.php';
     ?>
 </body>

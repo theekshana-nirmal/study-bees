@@ -1,60 +1,50 @@
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
+document.addEventListener('DOMContentLoaded', function () {
+    const track = document.querySelector('.carousel-track');
+    const cards = Array.from(track.children);
+    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.prev');
 
-let carouselVp = document.querySelector("#carousel-vp");
+    let currentIndex = 0;
 
-let cCarouselInner = document.querySelector("#cCarousel-inner");
-let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
+    // Function to get the width of a single card
+    const getCardWidth = () => cards[0].getBoundingClientRect().width;
 
-let leftValue = 0;
+    // Function to calculate the number of visible cards based on screen size
+    const getVisibleCardsCount = () => {
+        const width = window.innerWidth;
+        if (width <= 768) return 1; // small screen
+        if (width <= 1024) return 2; // medium screen
+        return 3; // large screen
+    };
 
-// Variable used to set the carousel movement value (card's width + gap)
-const totalMovementSize =
-  parseFloat(
-    document.querySelector(".cCarousel-item").getBoundingClientRect().width,
-    10
-  ) +
-  parseFloat(
-    window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
-    10
-  );
+    const moveToCard = (index) => {
+        const cardWidth = getCardWidth();
+        const amountToMove = cardWidth * index;
+        track.style.transform = `translateX(-${amountToMove}px)`;
+    };
 
-prev.addEventListener("click", () => {
-  if (!leftValue == 0) {
-    leftValue -= -totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-  }
+    // Update carousel on button click
+    nextButton.addEventListener('click', () => {
+        const visibleCardsCount = getVisibleCardsCount();
+        if (currentIndex < cards.length - visibleCardsCount) {
+            currentIndex++;
+            moveToCard(currentIndex);
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            moveToCard(currentIndex);
+        }
+    });
+
+    // Reset carousel position on window resize
+    window.addEventListener('resize', () => {
+        const visibleCardsCount = getVisibleCardsCount();
+        if (currentIndex > cards.length - visibleCardsCount) {
+            currentIndex = cards.length - visibleCardsCount;
+        }
+        moveToCard(currentIndex);
+    });
 });
-
-next.addEventListener("click", () => {
-  const carouselVpWidth = carouselVp.getBoundingClientRect().width;
-  if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
-    leftValue -= totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-  }
-});
-
-const mediaQuery510 = window.matchMedia("(max-width: 510px)");
-const mediaQuery770 = window.matchMedia("(max-width: 770px)");
-
-mediaQuery510.addEventListener("change", mediaManagement);
-mediaQuery770.addEventListener("change", mediaManagement);
-
-let oldViewportWidth = window.innerWidth;
-
-function mediaManagement() {
-  const newViewportWidth = window.innerWidth;
-
-  if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
-    leftValue += totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
-  } else if (
-    leftValue <= -totalMovementSize &&
-    oldViewportWidth > newViewportWidth
-  ) {
-    leftValue -= totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
-  }
-}
