@@ -5,20 +5,137 @@
 }
 
 /* HOME PAGE */
-@media (max-width: 1280px){
-    .container{
+@media (max-width: 1280px) {
+    .container {
         max-width: 1024px;
     }
 }
 
-@media (max-width: 1024px){
-    .container{
+@media (max-width: 1024px) {
+    .container {
         max-width: 800px;
+    }
+
+    .cta-section .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem 0;
+    }
+
+    .cta-section .column-right {
+        display: none;
+    }
+
+    .cta-section .column-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .row-top {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: initial;
+    }
+
+    footer .column-right {
+        width: 100%;
+    }
+
+    footer .row-top>.column-right>.footer-links {
+        padding-bottom: 2rem;
     }
 }
 
-@media (max-width: 800px){
-    .container{
+@media (max-width: 940px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .container {
+        max-width: 800px;
+    }
+
+    .hero-section>.container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section .column-left {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section .column-left div {
+        text-align: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
         max-width: 768px;
+    }
+
+    footer .row-top>.column-right>.footer-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+    .how-it-works-section .row-bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2rem 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .how-it-works-section .row-bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 2rem 0;
+    }
+
+    .testimonials-section{
+        display: none;
+    }
+
+    h1{
+        font-size: 5rem;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .navbar-shadow .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-shadow nav{
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-shadow .logo{
+        display: none;
     }
 }

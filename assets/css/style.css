@@ -5,6 +5,8 @@
 @import url(title-bar.css);
 @import url(../../assets/images/icons/css/study-bees-icons.css);
 
+/* RESPONSIVE CSS */
+@import url(responsive.css);
 
 body {
     display: flex;
@@ -13,8 +15,7 @@ body {
 
 /* HERO SECTION */
 .hero-section{
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding: 8rem 0;
 }
 .hero-section>.container {
     display: flex;
@@ -164,5 +165,3 @@ body {
 }
 
 
-/* RESPONSIVE CSS */
-@import url(responsive.css);
