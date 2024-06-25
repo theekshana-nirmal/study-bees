@@ -1,0 +1,51 @@
+.testimonials-section .carousel {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    min-height: 25rem;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.carousel-card{
+    flex: 0 0 33.333%; /* 3 cards in large screens */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.testimonials-section .carousel-track > .carousel-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.carousel a{
+    font-size: 4rem;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .carousel-card {
+        flex: 0 0 50%; /* 2 cards in medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-card {
+        flex: 0 0 100%; /* 1 card in small screens */
+    }
+}

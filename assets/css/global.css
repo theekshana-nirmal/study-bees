@@ -57,7 +57,7 @@ h3 {
 }
 
 hr {
-    border: solid 2px var(--color-low);
+    border: solid 2px #eaeaea;
     width: 25%;
     height: 0.5;
 }
@@ -169,7 +169,6 @@ label {
 /* SECTION */
 .section {
     display: flex;
-    min-height: 80vh;
     padding: 4rem 0;
 }
 

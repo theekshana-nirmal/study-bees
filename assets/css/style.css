@@ -5,6 +5,8 @@
 @import url(title-bar.css);
 @import url(../../assets/images/icons/css/study-bees-icons.css);
 
+/* RESPONSIVE CSS */
+@import url(responsive.css);
 
 body {
     display: flex;
@@ -13,8 +15,7 @@ body {
 
 /* HERO SECTION */
 .hero-section{
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding: 8rem 0;
 }
 .hero-section>.container {
     display: flex;
@@ -100,12 +101,10 @@ body {
 }
 
 /* SUCCESS STORIES */
-.testimonials-section{
-    min-height: 90vh;
-}
 .testimonials-section .row-top {
     display: flex;
     justify-content: center;
+    padding: 5rem 0;
 }
 
 .testimonials-section .row-bottom {
@@ -114,42 +113,8 @@ body {
     align-items: center;
 }
 
-.testimonials-section .carousel {
-    display: flex;
-    width: 100%;
-    min-height: 25rem;
-}
-
-.testimonials-section .btn-navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-.btn-navigation a{
-    font-size: 4rem;
-    color: var(--color-primary);
-    cursor: pointer;
-}
-
-.testimonials-section .cards {
-    display: flex;
-    flex: 6;
-    gap: 2rem;
-}
-
-.testimonials-section .cards>.card div {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
 .testimonials-section .container {
     padding-bottom: 6rem;
-}
-
-.testimonials-section .row-top {
-    padding: 5rem 0;
 }
 
 /* CALL TO ACTION SECTION */
@@ -198,3 +163,5 @@ body {
     color: var(--color-light);
     transition: ease-in-out 0.2s;   
 }
+
+
