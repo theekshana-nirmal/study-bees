@@ -169,7 +169,6 @@ label {
 /* SECTION */
 .section {
     display: flex;
-    min-height: 80vh;
     padding: 4rem 0;
 }
 

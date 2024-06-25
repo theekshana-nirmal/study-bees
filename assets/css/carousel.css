@@ -20,7 +20,7 @@
 }
 
 .carousel-card{
-    flex: 0 0 33.3333%; /* 3 cards in large screens */
+    flex: 0 0 33.333%; /* 3 cards in large screens */
     box-sizing: border-box;
     text-align: center;
 }

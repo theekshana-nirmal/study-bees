@@ -100,9 +100,6 @@ body {
 }
 
 /* SUCCESS STORIES */
-.testimonials-section{
-    min-height: 90vh;
-}
 .testimonials-section .row-top {
     display: flex;
     justify-content: center;
@@ -165,3 +162,7 @@ body {
     color: var(--color-light);
     transition: ease-in-out 0.2s;   
 }
+
+
+/* RESPONSIVE CSS */
+@import url(responsive.css);

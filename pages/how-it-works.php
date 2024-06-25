@@ -35,7 +35,7 @@
         </div>
     </div>
     <!-- STEP 01 -->
-    <div class="container">
+    <div class="container how-it-works">
         <section class="section">
             <div class="column-text">
                 <h1><span class="txt-color-primary">Step 01:</span><br> Sign Up and Customize Your Profile</h1>
