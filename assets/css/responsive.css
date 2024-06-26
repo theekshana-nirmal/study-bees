@@ -55,6 +55,23 @@
         width: 100%;
     }
 
+    /* How it Works */
+    .how-it-works .section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .how-it-works section img{
+        display: none;
+    }
+
+    .how-it-works .column-text{
+        text-align: center;
+    }
+
+    /* Repeat for forms */
     .contact-us-section .container {
         width: 100%;
     }
@@ -62,6 +79,7 @@
     .contact-us-section form {
         min-width: initial;
     }
+    /* -------------------------- */
 
     footer .row-top {
         flex-direction: column-reverse;
@@ -89,7 +107,6 @@
     .hero-section {
         padding: 2rem 0;
     }
-
 
     .hero-section>.container {
         flex-direction: column;
