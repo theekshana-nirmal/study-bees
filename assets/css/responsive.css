@@ -178,6 +178,14 @@
         font-size: 5rem;
     }
 
+    /* User Profile */
+    .profile-page-layout{
+        flex-direction: column;
+    }
+    .profile-page .profile-page-layout{
+        padding: 1rem 0 !important;
+    }
+
 }
 
 /* 600px */
