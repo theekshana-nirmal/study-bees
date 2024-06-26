@@ -193,7 +193,7 @@ form {
     align-items: center;
     flex-direction: column;
     gap: 2rem;
-    min-width: 700px;
+    min-width: 600px;
     accent-color: var(--color-primary);
 }
 
