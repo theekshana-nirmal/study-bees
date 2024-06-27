@@ -37,6 +37,10 @@ body {
     gap: 1rem;
 }
 
+.hero-section .btn-secondary{
+    width: 50%;
+}
+
 /* HOW IT WORKS SECTION */
 .how-it-works-section {
     min-height: auto;

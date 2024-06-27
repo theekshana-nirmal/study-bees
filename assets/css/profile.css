@@ -1,32 +1,34 @@
-.profile-link{
+.profile-link {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-header .profile-picture{
+header .profile-picture {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-header .profile-link h2{
+header .profile-link h2 {
     font-size: 1rem;
 }
 
-.card{
+.card {
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(35, 34, 27, 0.15) 0px 0px 0px 1px;
 }
 
 /* Profile Page layout design*/
-.profile-page .profile-page-layout{
+.profile-page .profile-page-layout,
+.profile-page .edit-profile-page-layout {
     display: flex;
     min-height: 90vh;
     gap: 1rem;
     padding: 2rem;
 }
 
-.profile-page .profile-page-layout .user-details-section{
+.profile-page .profile-page-layout .user-details-section,
+.edit-profile-page-layout .user-details-section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -35,7 +37,7 @@ header .profile-link h2{
     height: 100%;
 }
 
-.profile-page .profile-page-layout .subject-groups-section{ 
+.profile-page .profile-page-layout .subject-groups-section {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -43,24 +45,24 @@ header .profile-link h2{
     width: 100%;
 }
 
-.subject-groups-section .subject-group{
+.subject-groups-section .subject-group {
     height: 100%;
-} 
+}
 
 /* Inside User details section */
-.user-details-section .user-details{
+.user-details-section .user-details {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.user-details .user-pic-and-name{
+.user-details .user-pic-and-name {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.user-details .user-buttons{
+.user-details .user-buttons {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -68,18 +70,18 @@ header .profile-link h2{
 }
 
 /* Edit profile button */
-.user-details .user-buttons .btn-primary{
+.user-details .user-buttons .btn-primary {
     border: solid 4px var(--color-secondary);
     background-color: var(--color-secondary);
     color: var(--color-light);
-    
+
 }
 
-.user-details .user-buttons .btn-primary:hover{
+.user-details .user-buttons .btn-primary:hover {
     background-color: #684e00;
 }
 
-.user-details .user-contact-details{
+.user-details .user-contact-details {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -88,23 +90,24 @@ header .profile-link h2{
 }
 
 /* Inside Subject Groups section */
-.subject-groups-section .subject-group{
+.subject-groups-section .subject-group {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.group-title{
+.group-title {
     width: 100%;
     background-color: #f6f6f6;
     padding: 1rem 1rem;
     border-radius: 1rem;
 }
-.group-title p{
+
+.group-title p {
     color: var(--color-secondary);
 }
 
-.subject-group .subjects{
+.subject-group .subjects {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
