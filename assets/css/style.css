@@ -15,7 +15,7 @@ body {
 
 /* HERO SECTION */
 .hero-section{
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 .hero-section>.container {
     display: flex;
@@ -35,6 +35,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.hero-section .btn-secondary{
+    width: 50%;
 }
 
 /* HOW IT WORKS SECTION */

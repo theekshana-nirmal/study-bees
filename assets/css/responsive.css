@@ -4,18 +4,20 @@
     margin: 0 auto;
 }
 
-/* HOME PAGE */
+/* 1280px */
 @media (max-width: 1280px) {
     .container {
         max-width: 1024px;
     }
 }
 
+/* 1024px */
 @media (max-width: 1024px) {
     .container {
         max-width: 800px;
     }
 
+    /* Home Page */
     .cta-section .container {
         display: flex;
         flex-direction: column;
@@ -36,6 +38,66 @@
         text-align: center;
     }
 
+    /* About Us */
+    .our-team-section .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our-team-section .card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contact-us-section {
+        padding: 4rem 0 !important;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* How it Works */
+    .how-it-works .section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .how-it-works section img {
+        display: none;
+    }
+
+    .how-it-works .column-text {
+        text-align: center;
+    }
+
+    /* Forms */
+    .contact-us-section .container,
+    .form-wrapper .container {
+        width: 100%;
+    }
+
+    .form-wrapper form,
+    .edit-user-details-section form {
+        min-width: 100px;
+    }
+
+    .form-wrapper .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-wrapper .row-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Edit profile page */
+    .edit-profile-page-layout {
+        flex-direction: column;
+        padding: 2rem 0 !important;
+    }
+
     footer .row-top {
         flex-direction: column-reverse;
         justify-content: center;
@@ -43,6 +105,12 @@
         gap: 1rem;
         padding-bottom: initial;
     }
+
+    /* Study Buddies */
+    .study-buddies-layout{
+        flex-direction: column;
+    }
+
 
     footer .column-right {
         width: 100%;
@@ -53,13 +121,14 @@
     }
 }
 
+/* 940px */
 @media (max-width: 940px) {
-    .hero-section {
-        padding: 2rem 0;
-    }
-
     .container {
         max-width: 800px;
+    }
+
+    .hero-section {
+        padding: 2rem 0;
     }
 
     .hero-section>.container {
@@ -78,9 +147,20 @@
     }
 }
 
+/* 800px */
 @media (max-width: 800px) {
     .container {
         max-width: 768px;
+    }
+
+    .title-row .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title-row .spacer {
+        display: none;
     }
 
     footer .row-top>.column-right>.footer-links {
@@ -90,20 +170,54 @@
         align-items: center;
         gap: 2rem;
     }
+
+    /* Study Buddies Section */
+    .study-buddies-layout{
+        padding: 1rem 0 !important;
+    }
 }
 
+/* 768px */
 @media (max-width: 768px) {
     .container {
         max-width: 90%;
     }
+
+    /* Home Page */
     .how-it-works-section .row-bottom {
         display: flex;
         flex-direction: column-reverse;
         padding: 2rem 0;
     }
 
+    /* About Us */
+    .about-us-main-section h1,
+    .our-team-section h1,
+    .contact-us-section h1 {
+        font-size: 5rem;
+    }
+    form{
+        min-width: initial;
+    }
+
+    /* User Profile */
+    .profile-page-layout{
+        flex-direction: column;
+    }
+
+    .profile-page .profile-page-layout,
+    .profile-page .edit-profile-page-layout {
+        padding: 1rem 0 !important;
+    }
+
+    .edit-user-details-section .row-group, .edit-user-details-section .button-group{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
 }
 
+/* 600px */
 @media (max-width: 600px) {
     .how-it-works-section .row-bottom {
         display: flex;
@@ -111,31 +225,54 @@
         padding: 2rem 0;
     }
 
-    .testimonials-section{
+    .testimonials-section {
         display: none;
     }
 
-    h1{
+    h1 {
         font-size: 5rem;
     }
+    /* About Us */
+    .about-us-main-section h1,
+    .our-team-section h1,
+    .contact-us-section h1 {
+        font-size: 4rem;
+    }
 
-    img{
+    img {
         width: 100%;
     }
 
-    .navbar-shadow .container{
+    .navbar-shadow .container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .navbar-shadow nav{
+    .navbar-shadow nav {
         width: 100%;
         justify-content: center;
         padding: 1rem 0;
     }
 
-    .navbar-shadow .logo{
+    .navbar-shadow .logo {
         display: none;
+    }
+
+    /* Forms */
+    .input-group {
+        width: 100%;
+    }
+
+    .input-group .selections {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .selections .subject-select-box {
+        width: 100%;
     }
 }

@@ -7,10 +7,12 @@
     background-color: var(--color-primary);
 } */
 
-.section{
+
+
+.how-it-works .section{
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    column-gap: 4rem;
 }
 
 .column-text{
@@ -18,4 +20,14 @@
     flex-direction: column;
     gap: 2rem;
     max-width: 500px;
+}
+
+.how-it-works{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.how-it-works .container{
+    width: 100%;
 }

@@ -53,59 +53,61 @@
     </div>
 
     <!-- OUR TEAM SECTION -->
-    <div class="container">
-        <section class="section">
-            <div class="row-text">
-                <h1><span class="txt-color-primary">Our Team</span></h1>
-            </div>
-            <div class="cards">
-                <div class="card">
-                    <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                    <div>
-                        <h2>G. Nimna Kshithija</h2>
-                        <p>
-                            UWU/ICT/22/032
-                        </p>
+    <div class="our-team-section">
+        <div class="container">
+            <section class="section">
+                <div class="row-text">
+                    <h1><span class="txt-color-primary">Our Team</span></h1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <div>
+                            <h2>G. Nimna Kshithija</h2>
+                            <p>
+                                UWU/ICT/22/032
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <div>
+                            <h2>T.A. Vithanage</h2>
+                            <p>
+                                UWU/ICT/22/036
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <div>
+                            <h2>K.A. Sajani Nimeshika</h2>
+                            <p>
+                                UWU/ICT/22/046
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <div>
+                            <h2>D.M. Janith Navodya Dasanayaka</h2>
+                            <p>
+                                UWU/ICT/22/061
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <div>
+                            <h2>P.G. Theekshana Nirmal Bandara</h2>
+                            <p>
+                                UWU/ICT/22/082
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                    <div>
-                        <h2>T.A. Vithanage</h2>
-                        <p>
-                            UWU/ICT/22/036
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                    <div>
-                        <h2>K.A. Sajani Nimeshika</h2>
-                        <p>
-                            UWU/ICT/22/046
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                    <div>
-                        <h2>D.M. Janith Navodya Dasanayaka</h2>
-                        <p>
-                            UWU/ICT/22/061
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                    <div>
-                        <h2>P.G. Theekshana Nirmal Bandara</h2>
-                        <p>
-                            UWU/ICT/22/082
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
     <hr>
     <!-- CONTACT US SECTION -->

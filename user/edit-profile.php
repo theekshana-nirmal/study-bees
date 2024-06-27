@@ -37,7 +37,7 @@
     <!-- User Profile -->
     <div class="profile-page">
         <div class="container">
-            <div class="profile-page-layout">
+            <div class="edit-profile-page-layout">
                 <!-- Left Column -->
                 <div class="user-details-section">
                     <div class="card user-details">
@@ -149,7 +149,6 @@
                             <a href="profile.php" class="btn-secondary">Cancel</a>
                             <button type="submit" class="btn-primary"><i class="icon-floppy-1"></i> Save</button>
                         </div>
-
                     </form>
                 </div>
             </div>
