@@ -78,7 +78,8 @@ header .profile-link h2 {
 }
 
 .user-details .user-buttons .btn-primary:hover {
-    background-color: #684e00;
+    background-color: rgba(45, 64, 89, 0.9);
+    border: solid 4px rgba(45, 64, 89, 0.9);
 }
 
 .user-details .user-contact-details {

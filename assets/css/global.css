@@ -1,11 +1,18 @@
 :root {
     /* COLORS */
-    --color-primary: #FFC100;
+    /* --color-primary: #FFC100;
     --color-secondary: #523E00;
     --color-tertiary: #FFFDED;
     --color-light: #FFFFFF;
     --color-danger: #EB5757;
-    --color-low: #523e0060;
+    --color-low: #523e0060; */
+
+    --color-primary: #FFB400;
+    --color-secondary: #2D4059;
+    --color-tertiary: #F6F6F6;
+    --color-light: #FFFFFF;
+    --color-danger: #EA5455;
+    --color-low: #595761;
 
     --font-size-title: 6rem;
     --font-size-sub-title: 1.5rem;
@@ -33,7 +40,6 @@
     font-family: poppins-regular;
     src: url(../fonts/poppins-regular.ttf);
 }
-
 /* TEXT */
 h1 {
     font-family: bebasneue-regular, Impact, 'Arial Narrow Bold', sans-serif;
@@ -148,11 +154,13 @@ label {
 }
 
 .logo-small {
-    width: 80px;
+    width: 70px;
+    padding: 1rem;
 }
 
 .logo-large {
-    width: 150px;
+    width: 120px;
+    padding: 1rem;
 }
 
 .logo-s>h1 {
@@ -261,7 +269,7 @@ form .txt-color-danger {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     border-radius: 1rem;
-    background: #ffd967;
+    background: #FFB400;
 }
 
 /* Handle on hover */
