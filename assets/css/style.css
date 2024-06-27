@@ -15,7 +15,7 @@ body {
 
 /* HERO SECTION */
 .hero-section{
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 .hero-section>.container {
     display: flex;
