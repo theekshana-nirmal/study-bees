@@ -1,6 +1,7 @@
 <?php
 //Start the session
 session_start();
+$full_name = $_SESSION['full_name'];
 
 //Check if the user is logged in, if not then redirect to login page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
@@ -42,8 +43,8 @@ $subject_name = $_SESSION['subject_name'];
             <nav>
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
-                    <h2>User Name</h2>
-                    <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
+                    <h2><?php echo $full_name; ?></h2>
+                    <img src="../assets/images/default-profile/default-profile-picture.png" alt="Profile Picture" class="profile-picture">
                 </a>
             </nav>
         </div>

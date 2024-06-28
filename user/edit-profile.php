@@ -1,12 +1,17 @@
 <?php
-    //Start the session
-    session_start();
+//Start the session
+session_start();
+$user_id = $_SESSION['user_id'];
+$email = $_SESSION['email'];
+$full_name = $_SESSION['full_name'];
+$profile_picture = $_SESSION['profile_picture'];
+$phone_number = $_SESSION['phone_number'];
 
-    //Check if the user is logged in, if not then redirect to login page
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("location: ../auth/login.php");
-        exit;
-    }
+//Check if the user is logged in, if not then redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: ../auth/login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +43,7 @@
             <nav>
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
-                    <h2>User Name</h2>
+                    <h2><?php echo $full_name ?></h2>
                     <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
                 </a>
             </nav>
@@ -57,7 +62,7 @@
                                 <img src="../assets/images/default-profile/default-profile-picture.png" alt="Profile Picture">
                             </div>
                             <div class="user-name">
-                                <h2>User Name</h2>
+                                <h2><?php echo $full_name; ?></h2>
                             </div>
                         </div>
                         <div class="user-buttons">
@@ -67,11 +72,11 @@
                         <div class="user-contact-details">
                             <div class="user-email">
                                 <h3><i class="icon-mail-alt"></i> Email:</h3>
-                                <p>user@email.com</p>
+                                <p><?php echo $email; ?></p>
                             </div>
                             <div class="user-phone">
                                 <h3><i class="icon-phone-squared"></i> Phone:</h3>
-                                <p>1234567890</p>
+                                <p><?php echo $phone_number; ?></p>
                             </div>
                         </div>
                     </div>
