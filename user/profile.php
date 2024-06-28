@@ -15,9 +15,13 @@ $phone_number = $_SESSION['phone_number'];
 
 //Get user selected subjects
 include '../actions/get_user_subjects.php';
-
 $weak_subjects = $_SESSION['weak_subjects'];
 $strong_subjects = $_SESSION['strong_subjects'];
+
+// Unset the 'subject_name' session variable if it exists
+if (isset($_SESSION['subject_name'])) {
+    unset($_SESSION['subject_name']);
+}
 
 ?>
 
@@ -96,7 +100,7 @@ $strong_subjects = $_SESSION['strong_subjects'];
                         <div class="subjects">
                             <!-- Print all the weak subjects of the user -->
                             <?php foreach ($weak_subjects as $subject) : ?>
-                                <a href="study-buddies.php" class="btn-primary"><?php echo htmlspecialchars($subject); ?></a>
+                                <a href="study-buddies.php?subject_name=<?php echo htmlspecialchars($subject); ?>" class="btn-primary"><?php echo htmlspecialchars($subject); ?></a>
                             <?php endforeach; ?>
                         </div>
                     </div>
@@ -109,7 +113,7 @@ $strong_subjects = $_SESSION['strong_subjects'];
                         <div class="subjects">
                             <!-- Print all the strong subjects of the user -->
                             <?php foreach ($strong_subjects as $subject) : ?>
-                                <a href="study-buddies.php" class="btn-primary"><?php echo htmlspecialchars($subject); ?></a>
+                                <a href="study-buddies.php?subject_name=<?php echo htmlspecialchars($subject); ?>" class="btn-primary"><?php echo htmlspecialchars($subject); ?></a>
                             <?php endforeach; ?>
                         </div>
                     </div>

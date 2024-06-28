@@ -1,12 +1,17 @@
 <?php
-    //Start the session
-    session_start();
+//Start the session
+session_start();
 
-    //Check if the user is logged in, if not then redirect to login page
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("location: ../auth/login.php");
-        exit;
-    }
+//Check if the user is logged in, if not then redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: ../auth/login.php");
+    exit;
+}
+
+//Get the subject name of the page
+include '../actions/act_study_buddies.php';
+$subject_name = $_SESSION['subject_name'];
+
 ?>
 
 <!DOCTYPE html>
@@ -50,7 +55,7 @@
             <a href="profile.php">
                 <i class="icon-left-open"></i>
             </a>
-            <h1 class="title">Subject Name</h1>
+            <h1 class="title"><?php echo $subject_name ?></h1>
             <div class="spacer"></div>
         </div>
     </div>
