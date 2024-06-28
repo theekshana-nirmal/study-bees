@@ -1,3 +1,9 @@
+<?php
+    //Start the session
+    session_start();
+    require "../includes/db_connect.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +45,7 @@
     <div class="form-wrapper">
         <div class="container">
             <div class="card">
-                <form action="#" method="POST">
+                <form action="../actions/act_login.php" method="POST">
                    <p class="form-heading-text">Welcome back! Access your account to stay in touch with your study community. <br> Please enter your email and password to log in.</p>
                     <hr>
                     <div class="input-group">
