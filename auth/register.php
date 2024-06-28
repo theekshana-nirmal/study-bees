@@ -44,17 +44,17 @@
     <div class="form-wrapper">
         <div class="container">
             <div class="card">
-                <form action="#" method="POST">
+                <form action="../actions/act_register.php" method="POST">
                    <p class="form-heading-text">Register now to find study partners who need your help in your strong subjects and who can support you in your weak subjects! 🏆</p>
                     <hr>
                     <div class="row-group">
                         <div class="input-group">
                             <label>First Name<span class="txt-color-danger">*</span></label>
-                            <input type="text" name="f-name" required>
+                            <input type="text" name="first_name" required>
                         </div>
                         <div class="input-group">
                             <label>Last Name<span class="txt-color-danger">*</span></label>
-                            <input type="text" name="l-name" required>
+                            <input type="text" name="last_name" required>
                         </div>
                     </div>
                     <div class="input-group">
@@ -63,7 +63,7 @@
                     </div>
                     <div class="input-group">
                         <label>Phone Number</label>
-                        <input type="tel" name="phone-number">
+                        <input type="tel" name="phone_number">
                     </div>
                     <div class="input-group">
                         <label>Password<span class="txt-color-danger">*</span></label>
@@ -71,50 +71,50 @@
                     </div>
                     <div class="input-group">
                         <label>Confirm Password<span class="txt-color-danger">*</span></label>
-                        <input type="password" name="confirm-password" required>
+                        <input type="password" name="confirm_password" required>
                     </div>
                     <!-- Weak Subject Select -->
                     <div class="input-group">
                         <label>Select your weak subjects</label>
                         <div class="selections">
                             <div class="subject-select-box">
-                                <input type="checkbox" id="mathematics" name="subjects[]" value="Mathematics">
+                                <input type="checkbox" id="mathematics" name="weak_subjects[]" value="1">
                                 <label for="mathematics">Mathematics</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="science" name="subjects[]" value="Science">
+                                <input type="checkbox" id="science" name="weak_subjects[]" value="2">
                                 <label for="science">Science</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="english" name="subjects[]" value="English Language">
+                                <input type="checkbox" id="english" name="weak_subjects[]" value="3">
                                 <label for="english">English Language</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="ict" name="subjects[]" value="ICT">
+                                <input type="checkbox" id="ict" name="weak_subjects[]" value="4">
                                 <label for="ict">ICT</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="sinhala" name="subjects[]" value="Sinhala Language">
+                                <input type="checkbox" id="sinhala" name="weak_subjects[]" value="5">
                                 <label for="sinhala">Sinhala Language</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="tamil" name="subjects[]" value="Tamil Language">
+                                <input type="checkbox" id="tamil" name="weak_subjects[]" value="6">
                                 <label for="tamil">Tamil Language</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="history" name="subjects[]" value="History">
+                                <input type="checkbox" id="history" name="weak_subjects[]" value="7">
                                 <label for="history">History</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="geography" name="subjects[]" value="Geography">
+                                <input type="checkbox" id="geography" name="weak_subjects[]" value="8">
                                 <label for="geography">Geography</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="business" name="subjects[]" value="Business Studies">
+                                <input type="checkbox" id="business" name="weak_subjects[]" value="9">
                                 <label for="business">Business Studies</label>
                             </div>
                             <div class="subject-select-box">
-                                <input type="checkbox" id="civic" name="subjects[]" value="Civic Education">
+                                <input type="checkbox" id="civic" name="weak_subjects[]" value="10">
                                 <label for="civic">Civic Education</label>
                             </div>
                         </div>
