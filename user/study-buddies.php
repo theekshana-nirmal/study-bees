@@ -1,6 +1,14 @@
 <?php
     //Start the session
     session_start();
+    require_once "config.php";
+
+    //Check if the user is logged in, if not then redirect to login page
+    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+        header("location: ../auth/login.php");
+        exit;
+        
+    }
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +37,7 @@
                 <h1>Study Bees</h1>
             </div>
             <nav>
-                <a href="../auth/login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
+                <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2>User Name</h2>
                     <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
