@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include 'db_connect.php';
+include '../includes/db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mysqli_num_rows($result) == 1) {
         $row = mysqli_fetch_assoc($result);
         $user_id = $row['user_id'];
-        $hashed_password = $row['password'];
+        $hashed_password = $row['psw'];
         $first_name = $row['first_name'];
         $last_name = $row['last_name'];
         $profile_picture = $row['profile_picture'];
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['email'] = $email;
             $_SESSION['first_name'] = $first_name;
             $_SESSION['last_name'] = $last_name;
-            $_SESSION['full_name'] = $$first_name . " " . $last_name;
+            $_SESSION['full_name'] = $first_name . " " . $last_name;
             $_SESSION['profile_picture'] = $profile_picture;
             $_SESSION['phone_number'] = $phone_number;
 
