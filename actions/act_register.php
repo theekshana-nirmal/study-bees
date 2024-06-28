@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db_connect.php';
+include '../includes/db_connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = mysqli_real_escape_string($conn, $_POST['first_name']);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert user into the database
-    $sql = "INSERT INTO users (first_name, last_name, email, phone_number, pwd)
+    $sql = "INSERT INTO users (first_name, last_name, email, phone_number, psw)
             VALUES ('$first_name', '$last_name', '$email', '$phone_number', '$password')";
 
     if (mysqli_query($conn, $sql)) {
@@ -58,3 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 mysqli_close($conn);
+
+
+?>
