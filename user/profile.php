@@ -1,12 +1,24 @@
 <?php
-    //Start the session
-    session_start();
+//Start the session
+session_start();
 
-    //Check if the user is logged in, if not then redirect to login page
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("location: ../auth/login.php");
-        exit;
-    }
+//Check if the user is logged in, if not then redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: ../auth/login.php");
+    exit;
+}
+$user_id = $_SESSION['user_id'];
+$email = $_SESSION['email'];
+$full_name = $_SESSION['full_name'];
+$profile_picture = $_SESSION['profile_picture'];
+$phone_number = $_SESSION['phone_number'];
+
+//Get user selected subjects
+include '../actions/get_user_subjects.php';
+
+$weak_subjects = $_SESSION['weak_subjects'];
+$strong_subjects = $_SESSION['strong_subjects'];
+
 ?>
 
 <!DOCTYPE html>
@@ -36,7 +48,7 @@
             <nav>
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
-                    <h2>User Name</h2>
+                    <h2><?php echo $full_name; ?></h2>
                     <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
                 </a>
             </nav>
@@ -55,7 +67,7 @@
                                 <img src="../assets/images/default-profile/default-profile-picture.png" alt="Profile Picture">
                             </div>
                             <div class="user-name">
-                                <h2>User Name</h2>
+                                <h2><?php echo $full_name; ?></h2>
                             </div>
                         </div>
                         <div class="user-buttons">
@@ -65,11 +77,11 @@
                         <div class="user-contact-details">
                             <div class="user-email">
                                 <h3><i class="icon-mail-alt"></i> Email:</h3>
-                                <p>user@email.com</p>
+                                <p><?php echo $email; ?></p>
                             </div>
                             <div class="user-phone">
                                 <h3><i class="icon-phone-squared"></i> Phone:</h3>
-                                <p>1234567890</p>
+                                <p><?php echo $phone_number; ?></p>
                             </div>
                         </div>
                     </div>
@@ -82,11 +94,10 @@
                             <p>Weak Subjects</p>
                         </div>
                         <div class="subjects">
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
+                            <!-- Print all the weak subjects of the user -->
+                            <?php foreach ($weak_subjects as $subject) : ?>
+                                <a href="study-buddies.php" class="btn-primary"><?php echo htmlspecialchars($subject); ?></a>
+                            <?php endforeach; ?>
                         </div>
                     </div>
 
@@ -96,11 +107,10 @@
                             <p>Strong Subjects</p>
                         </div>
                         <div class="subjects">
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
-                            <a href="study-buddies.php" class="btn-primary">Subject Name</a>
+                            <!-- Print all the strong subjects of the user -->
+                            <?php foreach ($strong_subjects as $subject) : ?>
+                                <a href="study-buddies.php" class="btn-primary"><?php echo htmlspecialchars($subject); ?></a>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -120,4 +130,5 @@
     include '../includes/footer.php';
     ?>
 </body>
+
 </html>
