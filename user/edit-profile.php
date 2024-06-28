@@ -3,6 +3,9 @@
 session_start();
 $user_id = $_SESSION['user_id'];
 $email = $_SESSION['email'];
+$first_name = $_SESSION['first_name'];
+$last_name = $_SESSION['last_name'];
+$_SESSION['full_name'] = $first_name . " " . $last_name;
 $full_name = $_SESSION['full_name'];
 $profile_picture = $_SESSION['profile_picture'];
 $phone_number = $_SESSION['phone_number'];
@@ -92,20 +95,20 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <div class="row-group">
                             <div class="input-group">
                                 <label>First Name<span class="txt-color-danger">*</span></label>
-                                <input type="text" name="f-name" required>
+                                <input type="text" name="f-name" required value="<?php echo $first_name ?>">
                             </div>
                             <div class="input-group">
                                 <label>Last Name<span class="txt-color-danger">*</span></label>
-                                <input type="text" name="l-name" required>
+                                <input type="text" name="l-name" required value="<?php echo $last_name ?>">
                             </div>
                         </div>
                         <div class="input-group">
                             <label>Email<span class="txt-color-danger">*</span></label>
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" required value="<?php echo $email ?>">
                         </div>
                         <div class="input-group">
                             <label>Phone Number</label>
-                            <input type="tel" name="phone-number">
+                            <input type="tel" name="phone-number" required value="<?php echo $phone_number ?>">
                         </div>
                         <div class="input-group">
                             <label>Password<span class="txt-color-danger">*</span></label>
@@ -119,46 +122,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <div class="input-group">
                             <label>Select your weak subjects</label>
                             <div class="selections">
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="mathematics" name="subjects[]" value="Mathematics">
-                                    <label for="mathematics">Mathematics</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="science" name="subjects[]" value="Science">
-                                    <label for="science">Science</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="english" name="subjects[]" value="English Language">
-                                    <label for="english">English Language</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="ict" name="subjects[]" value="ICT">
-                                    <label for="ict">ICT</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="sinhala" name="subjects[]" value="Sinhala Language">
-                                    <label for="sinhala">Sinhala Language</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="tamil" name="subjects[]" value="Tamil Language">
-                                    <label for="tamil">Tamil Language</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="history" name="subjects[]" value="History">
-                                    <label for="history">History</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="geography" name="subjects[]" value="Geography">
-                                    <label for="geography">Geography</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="business" name="subjects[]" value="Business Studies">
-                                    <label for="business">Business Studies</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="civic" name="subjects[]" value="Civic Education">
-                                    <label for="civic">Civic Education</label>
-                                </div>
+                                <?php include '../actions/get_checkbox_data.php'; ?>
                             </div>
                         </div>
                         <div class="button-group">
