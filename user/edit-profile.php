@@ -47,7 +47,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2><?php echo $full_name ?></h2>
-                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture">
+                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture-small">
                 </a>
             </nav>
         </div>
@@ -87,10 +87,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
                 <!-- Right Column -->
                 <div class="edit-user-details-section">
-                    <form action="../actions/act_edit_profile.php" method="POST" class="card">
+                    <form action="../actions/act_edit_profile.php" method="POST" class="card" enctype="multipart/form-data">
                         <div class="input-group">
                             <label>Profile Picture</label>
-                            <input type="file" accept=".png, .jpeg, .jpg" name="profile_picture">
+                            
+                            <input type="file" name="profile_picture" accept="image/*">
                         </div>
                         <div class="row-group">
                             <div class="input-group">
@@ -127,7 +128,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                         <div class="button-group">
                             <a href="profile.php" class="btn-secondary">Cancel</a>
-                            <button type="submit" class="btn-primary"><i class="icon-floppy-1"></i> Save</button>
+                            <button type="submit" class="btn-primary" name="update_profile"><i class="icon-floppy-1"></i> Save</button>
                         </div>
                     </form>
                 </div>

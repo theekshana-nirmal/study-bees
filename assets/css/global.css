@@ -169,6 +169,29 @@ label {
     justify-content: center;
 }
 
+/* Profile Picture */
+.profile-picture-small {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: solid 4px var(--color-primary);
+}
+
+.profile-picture-medium {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-picture-large {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 /* LOGO */
 .logo {
     display: flex;

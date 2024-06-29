@@ -53,7 +53,7 @@ if (isset($_SESSION['subject_name'])) {
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2><?php echo $full_name; ?></h2>
-                    <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
+                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture">
                 </a>
             </nav>
         </div>
@@ -68,7 +68,7 @@ if (isset($_SESSION['subject_name'])) {
                     <div class="card user-details">
                         <div class="user-pic-and-name">
                             <div class="profile-picture">
-                                <img src="<?php echo $profile_picture ?>" alt="Profile Picture">
+                                <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture-large">
                             </div>
                             <div class="user-name">
                                 <h2><?php echo $full_name; ?></h2>

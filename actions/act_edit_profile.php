@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "Error inserting weak subjects: " . mysqli_error($conn);
                 }
             }
-            
+
             // Insert strong subjects based on weak subjects
             $sql_strong = "INSERT INTO user_strong_subjects (user_id, subject_id)
                                 SELECT '$user_id', subject_id
@@ -68,19 +68,67 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (mysqli_query($conn, $sql_strong)) {
                 echo "Strong subjects inserted successfully" . "<br>";
             } else {
-                echo "Error inserting strong subjects: " . mysqli_error($conn);
+                header("location: edit_profile.php?message=edit_profile_failed");
+                exit();
             }
-        
-        
+        }
 
+        //Profile picture upload
+        // Get information about the uploaded file
+        $image = $_FILES['profile_picture'];
 
+        // Check if image was uploaded
+        if (isset($image) && $image['error'] === 0) {
 
-        // //GO to profile page with success message
-        // header("location: ../user/profile.php?message=edit_profile_success");
-        // exit();
+            // Get image details
+            $imageName = $image['name'];
+            $imageTmpName = $image['tmp_name'];
+            $imageSize = $image['size'];
+            $imageError = $image['error'];
 
+            // Allowed image extensions
+            $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif');
+
+            // Extract image extension
+            $imageExtension = explode('.', $imageName);
+            $imageExtension = strtolower(end($imageExtension));
+
+            // Validate image extension
+            if (!in_array($imageExtension, $allowedExtensions)) {
+                echo "Error: Please select an image file - jpg, jpeg, png, gif allowed";
+                exit();
+            }
+
+            // Validate image size (optional)
+            if ($imageSize > 1048576) { // 1 MB
+                echo "Error: Image size is too large (Max 1 MB)";
+                exit();
+            }
+
+            // Create a new unique filename (optional)
+            $newImageName = uniqid('', true) . '.' . $imageExtension;
+
+            // Specify the destination folder for uploaded image
+            $destination = '../user/uploads/profile-picture/' . $newImageName;
+
+            // Move the uploaded file to the destination folder
+            if (move_uploaded_file($imageTmpName, $destination)) {
+                echo "Image uploaded successfully!";
+                // Update the profile picture in the database
+                $sql = "UPDATE users SET profile_picture = '$destination' WHERE user_id = '$user_id'";
+                if (mysqli_query($conn, $sql)) {
+                    echo "Profile picture updated successfully";
+                    $_SESSION['profile_picture'] = $destination;
+                    header("location: ../user/profile.php?message=profile_updated");
+                    exit();
+                } else {
+                    echo "Error updating profile picture: " . mysqli_error($conn);
+                }
+            } else {
+                echo "Error: There was a problem uploading the image.";
+            }
         } else {
-            echo "Error deleting existing records: " . mysqli_error($conn);
+            echo "Error: No image uploaded!";
         }
     }
 }

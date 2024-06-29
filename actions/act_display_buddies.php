@@ -11,7 +11,7 @@ if (!empty($users)) {
             $visibility = "show-item";
         }
         echo "<div class="."card study-buddy $visibility".">";
-        echo "<img src='" . htmlspecialchars($user['profile_picture']) . "' alt='Profile Picture' width='100' height='100'>";
+        echo "<img src='" . htmlspecialchars($user['profile_picture']) . "' alt='Profile Picture' class='profile-picture-medium'>";
         echo "<div class='profile-details'>";
         echo "<h2>" . htmlspecialchars($user['first_name']) . " " . htmlspecialchars($user['last_name']) . "</h2>";
         echo "<a href='member_info.php?member_id=" . $user['user_id'] . "'" . "class='btn-primary'> <i class='icon-eye'></i> View Profile</a>";

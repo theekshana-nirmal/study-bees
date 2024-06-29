@@ -46,7 +46,7 @@
     width: 100px;
 }
 
-.study-buddies-section .result-wrapper .study-buddy .profile-details{
+.study-buddies-section .result-wrapper .profile-details{
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -54,12 +54,18 @@
     gap: 0.5rem;
 }
 
-.study-buddies-section .result-wrapper .study-buddy .profile-details h2{
+.study-buddies-section .result-wrapper .profile-details h2{
     text-align: left;
 }
 
 .result-wrapper .btn-primary{
     padding: 0.2rem 1rem;
+    min-width: 300px;
+}
+
+.result-wrapper .study-material .btn-primary{
+    padding: 0.2rem 1rem;
+    min-width: initial;
 }
 
 .result-wrapper .study-material .material-details > *{
