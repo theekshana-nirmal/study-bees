@@ -81,44 +81,66 @@
                         <div class="carousel-track">
                             <!-- Card -->
                             <div class="carousel-card card">
-                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <img src="assets/images/carousel/user1.jpeg" alt="User Photo">
                                 <div>
-                                    <h2>User Name</h2>
+                                    <h2>Supun Rathnayake</h2>
                                     <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                        Study Bees is awesome! My study partner and I have improved so much since we started studying together 🏆
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Card -->
                             <div class="carousel-card card">
-                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <img src="assets/images/carousel/user2.jpeg" alt="User Photo">
                                 <div>
-                                    <h2>User Name</h2>
+                                    <h2>Kasun Lakshan</h2>
                                     <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                        I highly recommend  Study Bees to anyone who is looking for a supportive and productive study environment 🌟💯
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Card -->
                             <div class="carousel-card card">
-                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <img src="assets/images/carousel/user3.jpeg" alt="User Photo">
                                 <div>
-                                    <h2>User Name</h2>
+                                    <h2>Dinushi Silva</h2>
                                     <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                        Thanks to Study Bees, I’ve made a friend who makes studying enjoyable and effective. Highly recommend! 
                                     </p>
                                 </div>
                             </div>
 
                             <!-- Card -->
                             <div class="carousel-card card">
-                                <img src="assets/images/carousel/user1.png" alt="User Photo">
+                                <img src="assets/images/carousel/user4.jpeg" alt="User Photo">
                                 <div>
-                                    <h2>User Name</h2>
+                                    <h2>Kavindi Gamage</h2>
                                     <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quidem laudantium architecto facilis culpa tenetur.
+                                        Study Bees helped me find a study partner who shares my interest in ICT. We've both improved our grades together 🌟
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div class="carousel-card card">
+                                <img src="assets/images/carousel/user5.jpeg" alt="User Photo">
+                                <div>
+                                    <h2>Sachith Dilshan</h2>
+                                    <p>
+                                        I have seen a significant improvement in my grades since partnering up with my study buddy, and I owe it all to Study Bees!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card -->
+                            <div class="carousel-card card">
+                                <img src="assets/images/carousel/user6.jpeg" alt="User Photo">
+                                <div>
+                                    <h2>Pradeep Dias</h2>
+                                    <p>
+                                        Thanks to Study Bees, I’ve made a friend and a study partner who has helped me excel in my mathematics 💡
                                     </p>
                                 </div>
                             </div>

@@ -1,12 +1,20 @@
 <?php
-    //Start the session
-    session_start();
+//Start the session
+session_start();
+$user_id = $_SESSION['user_id'];
+$email = $_SESSION['email'];
+$first_name = $_SESSION['first_name'];
+$last_name = $_SESSION['last_name'];
+$_SESSION['full_name'] = $first_name . " " . $last_name;
+$full_name = $_SESSION['full_name'];
+$profile_picture = $_SESSION['profile_picture'];
+$phone_number = $_SESSION['phone_number'];
 
-    //Check if the user is logged in, if not then redirect to login page
-    if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-        header("location: ../auth/login.php");
-        exit;
-    }
+//Check if the user is logged in, if not then redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("location: ../auth/login.php");
+    exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +32,7 @@
     <link rel="stylesheet" href="../assets/css/forms.css">
     <link rel="stylesheet" href="../assets/css/edit-profile.css">
 
-    <title>Study Bees</title>
+    <title>Study Bees | <?php echo $full_name ?></title>
 </head>
 
 <body>
@@ -38,8 +46,8 @@
             <nav>
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
-                    <h2>User Name</h2>
-                    <img src="../assets/images/default-profile//default-profile-picture.png" alt="Profile Picture" class="profile-picture">
+                    <h2><?php echo $full_name ?></h2>
+                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture-small">
                 </a>
             </nav>
         </div>
@@ -54,10 +62,10 @@
                     <div class="card user-details">
                         <div class="user-pic-and-name">
                             <div class="profile-picture">
-                                <img src="../assets/images/default-profile/default-profile-picture.png" alt="Profile Picture">
+                                <img src="<?php echo $profile_picture ?>" alt="Profile Picture">
                             </div>
                             <div class="user-name">
-                                <h2>User Name</h2>
+                                <h2><?php echo $full_name; ?></h2>
                             </div>
                         </div>
                         <div class="user-buttons">
@@ -67,11 +75,11 @@
                         <div class="user-contact-details">
                             <div class="user-email">
                                 <h3><i class="icon-mail-alt"></i> Email:</h3>
-                                <p>user@email.com</p>
+                                <p><?php echo $email; ?></p>
                             </div>
                             <div class="user-phone">
                                 <h3><i class="icon-phone-squared"></i> Phone:</h3>
-                                <p>1234567890</p>
+                                <p><?php echo $phone_number; ?></p>
                             </div>
                         </div>
                     </div>
@@ -79,28 +87,29 @@
 
                 <!-- Right Column -->
                 <div class="edit-user-details-section">
-                    <form action="#" method="POST" class="card">
+                    <form action="../actions/act_edit_profile.php" method="POST" class="card" enctype="multipart/form-data">
                         <div class="input-group">
                             <label>Profile Picture</label>
-                            <input type="file" accept=".png, .jpeg, .jpg" name="profile-picture">
+                            
+                            <input type="file" name="profile_picture" accept="image/*">
                         </div>
                         <div class="row-group">
                             <div class="input-group">
                                 <label>First Name<span class="txt-color-danger">*</span></label>
-                                <input type="text" name="f-name" required>
+                                <input type="text" name="first_name" required value="<?php echo $first_name ?>">
                             </div>
                             <div class="input-group">
                                 <label>Last Name<span class="txt-color-danger">*</span></label>
-                                <input type="text" name="l-name" required>
+                                <input type="text" name="last_name" required value="<?php echo $last_name ?>">
                             </div>
                         </div>
                         <div class="input-group">
                             <label>Email<span class="txt-color-danger">*</span></label>
-                            <input type="email" name="email" required>
+                            <input type="email" name="email" required value="<?php echo $email ?>">
                         </div>
                         <div class="input-group">
                             <label>Phone Number</label>
-                            <input type="tel" name="phone-number">
+                            <input type="tel" name="phone_number" required value="<?php echo $phone_number ?>">
                         </div>
                         <div class="input-group">
                             <label>Password<span class="txt-color-danger">*</span></label>
@@ -108,57 +117,18 @@
                         </div>
                         <div class="input-group">
                             <label>Confirm Password<span class="txt-color-danger">*</span></label>
-                            <input type="password" name="confirm-password" required>
+                            <input type="password" name="confirm_password" required>
                         </div>
                         <!-- Weak Subject Select -->
                         <div class="input-group">
                             <label>Select your weak subjects</label>
                             <div class="selections">
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="mathematics" name="subjects[]" value="Mathematics">
-                                    <label for="mathematics">Mathematics</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="science" name="subjects[]" value="Science">
-                                    <label for="science">Science</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="english" name="subjects[]" value="English Language">
-                                    <label for="english">English Language</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="ict" name="subjects[]" value="ICT">
-                                    <label for="ict">ICT</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="sinhala" name="subjects[]" value="Sinhala Language">
-                                    <label for="sinhala">Sinhala Language</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="tamil" name="subjects[]" value="Tamil Language">
-                                    <label for="tamil">Tamil Language</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="history" name="subjects[]" value="History">
-                                    <label for="history">History</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="geography" name="subjects[]" value="Geography">
-                                    <label for="geography">Geography</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="business" name="subjects[]" value="Business Studies">
-                                    <label for="business">Business Studies</label>
-                                </div>
-                                <div class="subject-select-box">
-                                    <input type="checkbox" id="civic" name="subjects[]" value="Civic Education">
-                                    <label for="civic">Civic Education</label>
-                                </div>
+                                <?php include '../actions/get_checkbox_data.php'; ?>
                             </div>
                         </div>
                         <div class="button-group">
                             <a href="profile.php" class="btn-secondary">Cancel</a>
-                            <button type="submit" class="btn-primary"><i class="icon-floppy-1"></i> Save</button>
+                            <button type="submit" class="btn-primary" name="update_profile"><i class="icon-floppy-1"></i> Save</button>
                         </div>
                     </form>
                 </div>
