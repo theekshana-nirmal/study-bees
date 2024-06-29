@@ -85,6 +85,14 @@ label {
     color: var(--color-danger);
 }
 
+.remove-item{
+    display: none;
+}
+
+.show-item{
+    display: block;
+}
+
 /* BUTTONS */
 .btn-primary {
     padding: var(--btn-padding);
@@ -145,6 +153,20 @@ label {
     ;
     color: var(--color-light);
     transition: ease-in-out 0.2s;
+}
+
+.normal-information {
+    padding: var(--btn-padding);
+    color: var(--color-secondary);
+    border: solid 2px rgba(45, 64, 89, 0.2);
+    background-color: transparent;
+    border-radius: var(--btn-border-radius);
+    text-align: center;
+    font-weight: bold;
+    transition: ease-in-out 0.2s;
+
+    display: flex;
+    justify-content: center;
 }
 
 /* LOGO */

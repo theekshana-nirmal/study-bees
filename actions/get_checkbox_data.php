@@ -44,7 +44,7 @@ foreach ($subjects as $subject) {
 
     // Output the checkbox and label
     echo '<div class="subject-select-box">';
-    echo '<input type="checkbox" id="' . htmlspecialchars($subject) . '" name="subjects[]" value="' . htmlspecialchars($subject) . '" ' . $checked . '>';
+    echo '<input type="checkbox" id="' . htmlspecialchars($subject) . '" name="weak_subjects[]" value="' . htmlspecialchars($subject) . '" ' . $checked . '>';
     echo '<label for="' . htmlspecialchars($subject) . '">' . htmlspecialchars($subject) . '</label>';
     echo '</div>';
 }

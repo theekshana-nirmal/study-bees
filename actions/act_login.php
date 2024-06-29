@@ -31,7 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['full_name'] = $first_name . " " . $last_name;
             $_SESSION['profile_picture'] = $profile_picture;
             $_SESSION['phone_number'] = $phone_number;
-
+            $_SESSION['profile_picture'] = $profile_picture;
+            
             $_SESSION['loggedin'] = true;
 
             // Redirect to the profile page

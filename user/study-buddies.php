@@ -12,6 +12,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 //Get the subject name of the page
 include '../actions/act_study_buddies.php';
 $subject_name = $_SESSION['subject_name'];
+$profile_picture = $_SESSION['profile_picture'];
 
 ?>
 
@@ -29,7 +30,7 @@ $subject_name = $_SESSION['subject_name'];
     <link rel="stylesheet" href="../assets/css/profile.css">
     <link rel="stylesheet" href="../assets/css/study-buddies.css">
 
-    <title>Study Bees</title>
+    <title>Study Bees | <?php echo $full_name ?></title>
 </head>
 
 <body>
@@ -44,7 +45,7 @@ $subject_name = $_SESSION['subject_name'];
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2><?php echo $full_name; ?></h2>
-                    <img src="../assets/images/default-profile/default-profile-picture.png" alt="Profile Picture" class="profile-picture">
+                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture">
                 </a>
             </nav>
         </div>
@@ -72,53 +73,7 @@ $subject_name = $_SESSION['subject_name'];
                     </div>
                     <div class="result-wrapper">
                         <!-- Results -->
-                        <div class="card study-buddy">
-                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                            <div class="profile-details">
-                                <h2>User Name</h2>
-                                <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
-                            </div>
-                        </div>
-
-                        <div class="card study-buddy">
-                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                            <div class="profile-details">
-                                <h2>User Name</h2>
-                                <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
-                            </div>
-                        </div>
-
-                        <div class="card study-buddy">
-                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                            <div class="profile-details">
-                                <h2>User Name</h2>
-                                <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
-                            </div>
-                        </div>
-
-                        <div class="card study-buddy">
-                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                            <div class="profile-details">
-                                <h2>User Name</h2>
-                                <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
-                            </div>
-                        </div>
-
-                        <div class="card study-buddy">
-                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                            <div class="profile-details">
-                                <h2>User Name</h2>
-                                <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
-                            </div>
-                        </div>
-
-                        <div class="card study-buddy">
-                            <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
-                            <div class="profile-details">
-                                <h2>User Name</h2>
-                                <a href="profile.php" class="btn-primary"> <i class="icon-eye"></i> View Profile</a>
-                            </div>
-                        </div>
+                        <?php include '../actions/act_display_buddies.php'; ?>
                     </div>
                 </div>
 
