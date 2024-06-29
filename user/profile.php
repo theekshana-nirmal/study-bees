@@ -46,7 +46,7 @@ if (isset($_SESSION['subject_name'])) {
     <header class="navbar-shadow">
         <div class="container">
             <div class="logo logo-s">
-                <img src="<?php echo $profile_picture ?>" alt="LOGO" class="logo-small">
+                <img src="../assets/images/logo/logo-primary.png" alt="LOGO" class="logo-small">
                 <h1>Study Bees</h1>
             </div>
             <nav>

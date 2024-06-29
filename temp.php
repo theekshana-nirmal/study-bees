@@ -39,9 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_delete_strong = "DELETE FROM user_strong_subjects WHERE user_id = '$user_id'";
     if (mysqli_query($conn, $sql_delete) && mysqli_query($conn, $sql_delete_strong)) {
         if (!empty($_POST['weak_subjects'])) {
-            // Get weak subjects from the form
             $weak_subjects = $_POST['weak_subjects'];
-
             // Loop through each weak subject
             foreach ($weak_subjects as $subject_name) {
                 //get subject id from subject name
@@ -71,13 +69,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 echo "Error inserting strong subjects: " . mysqli_error($conn);
             }
         
-        
-
-
-
-        // //GO to profile page with success message
-        // header("location: ../user/profile.php?message=edit_profile_success");
-        // exit();
+        //GO to profile page with success message
+        header("location: ../user/profile.php?message=edit_profile_success");
+        exit();
 
         } else {
             echo "Error deleting existing records: " . mysqli_error($conn);
