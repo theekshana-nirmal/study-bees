@@ -84,6 +84,7 @@ body {
 .how-it-works-section .row-bottom {
     display: flex;
     gap: 2rem;
+    padding: 2rem 0;
 }
 
 .how-it-works-section .row-bottom>.column-left {

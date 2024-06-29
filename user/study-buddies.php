@@ -45,7 +45,7 @@ $profile_picture = $_SESSION['profile_picture'];
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2><?php echo $full_name; ?></h2>
-                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture">
+                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture-small">
                 </a>
             </nav>
         </div>

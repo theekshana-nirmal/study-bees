@@ -62,7 +62,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <div class="card user-details">
                         <div class="user-pic-and-name">
                             <div class="profile-picture">
-                                <img src="<?php echo $profile_picture ?>" alt="Profile Picture">
+                                <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture-large">
                             </div>
                             <div class="user-name">
                                 <h2><?php echo $full_name; ?></h2>

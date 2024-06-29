@@ -9,7 +9,7 @@
 
     --color-primary: #FFB400;
     --color-secondary: #2D4059;
-    --color-tertiary: #F6F6F6;
+    --color-tertiary: #FFFBF0;
     --color-light: #FFFFFF;
     --color-danger: #EA5455;
     --color-low: #595761;
@@ -52,7 +52,7 @@ h1 {
 h2 {
     font-family: poppins-regular, Arial, Helvetica, sans-serif;
     font-size: var(--font-size-sub-title);
-    color: var(--color-primary);
+    color: var(--color-secondary);
     text-transform: uppercase;
 }
 
@@ -171,11 +171,11 @@ label {
 
 /* Profile Picture */
 .profile-picture-small {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
-    border: solid 4px var(--color-primary);
+    border: solid 4px rgba(255, 179, 0, 0.5);
 }
 
 .profile-picture-medium {
@@ -215,7 +215,7 @@ label {
 
 .logo-l>h1 {
     font-size: var(--font-size-logo-large);
-    color: var(--color-tertiary) !important;
+    color: #F6F6F6 !important;
 }
 
 /* SECTION */

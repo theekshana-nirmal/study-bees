@@ -55,7 +55,7 @@ $member_strong_subjects = $_SESSION['member_strong_subjects'];
                 <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                 <a href="profile.php" class="profile-link">
                     <h2><?php echo $full_name; ?></h2>
-                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture">
+                    <img src="<?php echo $profile_picture ?>" alt="Profile Picture" class="profile-picture profile-picture-small">
                 </a>
             </nav>
         </div>
@@ -81,7 +81,7 @@ $member_strong_subjects = $_SESSION['member_strong_subjects'];
                     <div class="card user-details">
                         <div class="user-pic-and-name">
                             <div class="profile-picture">
-                                <img src="<?php echo $member_profile_picture ?>" alt="Profile Picture">
+                                <img src="<?php echo $member_profile_picture ?>" alt="Profile Picture" class="profile-picture-large">
                             </div>
                             <div class="user-name">
                                 <h2><?php echo $member_full_name; ?></h2>

@@ -133,17 +133,6 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Card -->
-                            <div class="carousel-card card">
-                                <img src="assets/images/carousel/user6.jpeg" alt="User Photo">
-                                <div>
-                                    <h2>Pradeep Dias</h2>
-                                    <p>
-                                        Thanks to Study Bees, I’ve made a friend and a study partner who has helped me excel in my mathematics 💡
-                                    </p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <a class="next">

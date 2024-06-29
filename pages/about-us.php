@@ -61,7 +61,7 @@
                 </div>
                 <div class="cards">
                     <div class="card">
-                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <img src="../assets/images/about-us/ict22032.jpg" alt="User Photo" class="profile-picture-medium">
                         <div>
                             <h2>G. Nimna Kshithija</h2>
                             <p>
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <img src="../assets/images/about-us/ict22036.jpg" alt="User Photo" class="profile-picture-medium">
                         <div>
                             <h2>T.A. Vithanage</h2>
                             <p>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <img src="../assets/images/about-us/ict22046.jpg" alt="User Photo" class="profile-picture-medium">
                         <div>
                             <h2>K.A. Sajani Nimeshika</h2>
                             <p>
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <img src="../assets/images/about-us/ict22061.jpg" alt="User Photo" class="profile-picture-medium">
                         <div>
                             <h2>D.M. Janith Navodya Dasanayaka</h2>
                             <p>
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="../assets/images/default-profile/default-profile-picture.png" alt="User Photo">
+                        <img src="../assets/images/about-us/ict22082.jpeg" alt="User Photo" class="profile-picture-medium">
                         <div>
                             <h2>P.G. Theekshana Nirmal Bandara</h2>
                             <p>
