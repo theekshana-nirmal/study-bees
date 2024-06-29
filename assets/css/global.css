@@ -157,7 +157,7 @@ label {
 
 .normal-information {
     padding: var(--btn-padding);
-    color: var(--color-secondary);
+    color: rgba(45, 64, 89, 0.8);
     border: solid 2px rgba(45, 64, 89, 0.2);
     background-color: transparent;
     border-radius: var(--btn-border-radius);

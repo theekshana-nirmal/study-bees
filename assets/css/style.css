@@ -121,6 +121,11 @@ body {
     padding-bottom: 6rem;
 }
 
+.carousel-card img{
+    border-radius: 50%;
+    width: 150px;
+}
+
 /* CALL TO ACTION SECTION */
 .cta-section {
     background-color: var(--color-primary);
