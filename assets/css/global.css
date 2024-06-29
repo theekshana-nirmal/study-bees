@@ -86,7 +86,7 @@ label {
 }
 
 .remove-item{
-    display: none;
+    display: none !important;
 }
 
 .show-item{

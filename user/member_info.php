@@ -48,7 +48,7 @@ $member_strong_subjects = $_SESSION['member_strong_subjects'];
     <header class="navbar-shadow">
         <div class="container">
             <div class="logo logo-s">
-                <img src="<?php echo $profile_picture ?>" alt="LOGO" class="logo-small">
+                <img src="../assets/images/logo/logo-primary.png" alt="LOGO" class="logo-small">
                 <h1>Study Bees</h1>
             </div>
             <nav>
@@ -102,7 +102,7 @@ $member_strong_subjects = $_SESSION['member_strong_subjects'];
                 <!-- Right Column -->
                 <div class="subject-groups-section">
                     <!-- Weak Subjects -->
-                    <div class="card subject-group">
+                    <div class="card subject-group remove-item">
                         <div class="group-title">
                             <p>Weak Subjects</p>
                         </div>
