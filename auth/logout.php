@@ -5,7 +5,7 @@ $_SESSION = array();
 session_destroy();
 
 session_start();
-$message = "You have successfully Logout";
+$message = "You have logout successfully!";
 $_SESSION['message'] = $message;
 header("location: ../auth/login.php?success=logout_successful");
 exit;

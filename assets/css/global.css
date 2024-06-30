@@ -100,11 +100,11 @@ label {
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: center;
-    font-weight: bold;
+    color: rgba(16, 123, 61, 0.5) !important;
+
     font-size: 1.2rem;
     background-color: #F1FDF6;
-    border: solid 2px #107B3D;
-    border-bottom: solid 4px #107B3D;
+    border: solid 1px rgba(16, 123, 61, 0.5) !important;
     border-radius: 0.5rem;
 
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -117,12 +117,11 @@ label {
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: center;
-    font-weight: bold;
+    color: rgba(230, 114, 12, 0.5) !important;
     font-size: 1.2rem;
 
     background-color: #FEF7F1;
-    border: solid 2px #E6720C;
-    border-bottom: solid 4px #E6720C;
+    border: solid 1px rgba(230, 114, 12, 0.5) !important;
     border-radius: 0.5rem;
 
     font-family: Roboto, Arial, Helvetica, sans-serif;
@@ -135,12 +134,11 @@ label {
     padding: 1rem;
     border-radius: 0.5rem;
     text-align: center;
-    font-weight: bold;
+    color: rgba(183, 0, 0, 0.5) !important;
     font-size: 1.2rem;
 
     background-color: #FFEBEB;
-    border: solid 2px #B70000;
-    border-bottom: solid 4px #B70000;
+    border: solid 1px rgba(183, 0, 0, 0.5) !important;
     border-radius: 0.5rem;
 
     font-family: Roboto, Arial, Helvetica, sans-serif;

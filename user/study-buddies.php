@@ -10,7 +10,11 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 }
 
 //Get the subject name of the page
-include '../actions/act_study_buddies.php';
+include '../actions/get_study_buddies.php';
+
+//Get study resources
+include '../actions/get_study_resources.php';
+
 $subject_name = $_SESSION['subject_name'];
 $profile_picture = $_SESSION['profile_picture'];
 
@@ -84,29 +88,7 @@ $profile_picture = $_SESSION['profile_picture'];
                     </div>
                     <div class="result-wrapper">
                         <!-- Results -->
-                        <div class="card study-material">
-                            <div class="material-details">
-                                <h2>Study Material Title</h2>
-                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum</P>
-                            </div>
-                            <a href="#" target="_blank" class="btn-primary"><i class="icon-angle-double-right"></i></a>
-                        </div>
-
-                        <div class="card study-material">
-                            <div class="material-details">
-                                <h2>Study Material Title</h2>
-                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum</P>
-                            </div>
-                            <a href="#" target="_blank" class="btn-primary"><i class="icon-angle-double-right"></i></a>
-                        </div>
-
-                        <div class="card study-material">
-                            <div class="material-details">
-                                <h2>Study Material Title</h2>
-                                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta ad nisi, natus ipsum</P>
-                            </div>
-                            <a href="#" target="_blank" class="btn-primary"><i class="icon-angle-double-right"></i></a>
-                        </div>
+                        <?php include '../actions/act_display_resources.php'; ?>
                     </div>
                 </div>
             </div>

@@ -70,7 +70,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                         <div class="user-buttons">
                             <a href="profile.php" class="btn-primary"><i class="icon-reply"></i> Back</a>
-                            <a href="../auth/login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
+                            <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
                         </div>
                         <div class="user-contact-details">
                             <div class="user-email">

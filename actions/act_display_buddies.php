@@ -5,11 +5,14 @@ $user_id = $_SESSION['user_id'];
 
 if (!empty($users)) {
     foreach ($users as $user) {
+        //Hide the  logged in user form the results
         if ($user['user_id'] == $user_id) {
             $visibility = "remove-item";
         }else{
             $visibility = "show-item";
         }
+
+        //Display the users
         echo "<div class="."card study-buddy $visibility".">";
         echo "<img src='" . htmlspecialchars($user['profile_picture']) . "' alt='Profile Picture' class='profile-picture-medium'>";
         echo "<div class='profile-details'>";
