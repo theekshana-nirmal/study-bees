@@ -1,6 +1,8 @@
 <?php
     //Start the session
     session_start();
+
+    $display = "remove-item";
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +48,8 @@
             <div class="card">
                 <form action="../actions/act_register.php" method="POST">
                    <p class="form-heading-text">Register now to find study partners who need your help in your strong subjects and who can support you in your weak subjects! 🏆</p>
+                    <!-- Display message -->
+                    <?php include '../actions/act_messages.php'; ?>
                     <hr>
                     <div class="row-group">
                         <div class="input-group">

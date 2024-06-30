@@ -74,6 +74,9 @@ if (isset($_SESSION['subject_name'])) {
                                 <h2><?php echo $full_name; ?></h2>
                             </div>
                         </div>
+                        <!-- Display message -->
+                        <?php include '../actions/act_messages.php'; ?>
+                        
                         <div class="user-buttons">
                             <a href="edit-profile.php" class="btn-primary"><i class="icon-cog"></i> Edit Profile</a>
                             <a href="../auth/login.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>

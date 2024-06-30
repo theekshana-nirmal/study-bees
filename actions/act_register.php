@@ -47,11 +47,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //If Registration is successful! the redirect to login page with saved session
             $_SESSION["registered"] = true;
             if (isset($_SESSION["registered"]) || $_SESSION["registered"] == true) {
-                header("location: ../auth/login.php");
+                $message = "Congratulations! 🎉 You have successfully registered. Please login to continue.";
+                $_SESSION['message'] = $message;
+                header("location: ../auth/login.php?success=registration_successful");
                 exit;
             }
         } else {
             //If Registration is not successful! the redirect to register page with error message
+            $message = "Registration failed! Please try again.";
+            $_SESSION['message'] = $message;
             header("location: ../auth/register.php?error=registration_failed");
             exit;
         }

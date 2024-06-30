@@ -85,12 +85,67 @@ label {
     color: var(--color-danger);
 }
 
+/* SHOW AND HIDE */
 .remove-item{
     display: none !important;
 }
 
 .show-item{
     display: block;
+}
+
+/* MESSAGES */
+.message-success {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #F1FDF6;
+    border: solid 2px #107B3D;
+    border-bottom: solid 4px #107B3D;
+    border-radius: 0.5rem;
+
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-text);
+    color: var(--color-secondary);
+}
+
+.message-warning {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    background-color: #FEF7F1;
+    border: solid 2px #E6720C;
+    border-bottom: solid 4px #E6720C;
+    border-radius: 0.5rem;
+
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-text);
+    color: var(--color-secondary);
+}
+
+.message-error {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    background-color: #FFEBEB;
+    border: solid 2px #B70000;
+    border-bottom: solid 4px #B70000;
+    border-radius: 0.5rem;
+
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: var(--font-size-text);
+    color: var(--color-secondary);
 }
 
 /* BUTTONS */

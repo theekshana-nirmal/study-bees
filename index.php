@@ -22,6 +22,7 @@
     $registration_page_path = 'auth/register.php';
     $login_page_path = 'auth/login.php';
 
+    
     include 'includes/header.php';
     ?>
 

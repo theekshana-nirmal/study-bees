@@ -1,7 +1,7 @@
 <?php
-    //Start the session
-    session_start();
-    require "../includes/db_connect.php";
+//Start the session
+session_start();
+require "../includes/db_connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +40,15 @@
             <div class="spacer"></div>
         </div>
     </div>
-    
+
     <!-- Log in Form -->
     <div class="form-wrapper">
         <div class="container">
             <div class="card">
                 <form action="../actions/act_login.php" method="POST">
-                   <p class="form-heading-text">Welcome back! Access your account to stay in touch with your study community. <br> Please enter your email and password to log in.</p>
+                    <p class="form-heading-text">Access your account to stay in touch with your study community. <br> Please enter your email and password to log in.</p>
+                    <!-- Display message -->
+                    <?php include '../actions/act_messages.php'; ?>
                     <hr>
                     <div class="input-group">
                         <label>Email<span class="txt-color-danger">*</span></label>

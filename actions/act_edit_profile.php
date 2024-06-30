@@ -29,9 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "UPDATE users SET first_name = '$first_name', last_name = '$last_name', email = '$email', phone_number = '$phone_number', psw = '$password_hashed' WHERE user_id = '$user_id'";
 
     if (mysqli_query($conn, $sql)) {
-        echo "Record updated successfully" . "<br>";
     } else {
-        echo "Error updating record: " . mysqli_error($conn);
+        $message = "Profile Update unsuccessful! ☹️";
+        $_SESSION['message'] = $message;
+        header("Location: ../user/edit-profile.php?error=profile_update_failed");
+        exit();
     }
 
     // Handling weak subjects
@@ -54,9 +56,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql_weak = "INSERT INTO user_weak_subjects (user_id, subject_id)
                                   VALUES ('$user_id', '$subject_id')";
                 if (mysqli_query($conn, $sql_weak)) {
-                    echo "Weak subjects inserted successfully" . "<br>";
                 } else {
-                    echo "Error inserting weak subjects: " . mysqli_error($conn);
+                    $message = "Profile Update unsuccessful! ☹️";
+                    $_SESSION['message'] = $message;
+                    header("Location: ../user/edit-profile.php?error=profile_update_failed");
+                    exit();
                 }
             }
 
@@ -66,9 +70,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 FROM subjects
                                 WHERE subject_id NOT IN (SELECT subject_id FROM user_weak_subjects WHERE user_id = '$user_id')";
             if (mysqli_query($conn, $sql_strong)) {
-                echo "Strong subjects inserted successfully" . "<br>";
             } else {
-                header("location: edit_profile.php?message=edit_profile_failed");
+                $message = "Profile Update unsuccessful! ☹️";
+                $_SESSION['message'] = $message;
+                header("Location: ../user/edit-profile.php?error=profile_update_failed");
                 exit();
             }
         }
@@ -95,13 +100,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Validate image extension
             if (!in_array($imageExtension, $allowedExtensions)) {
-                echo "Error: Please select an image file - jpg, jpeg, png, gif allowed";
+                $message = "Profile Update unsuccessful! Please select an image file - jpg, jpeg, png, gif allowed ☹️";
+                $_SESSION['message'] = $message;
+                header("Location: ../user/edit-profile.php?error=profile_update_failed");
                 exit();
             }
 
             // Validate image size (optional)
-            if ($imageSize > 1048576) { // 1 MB
-                echo "Error: Image size is too large (Max 1 MB)";
+            if ($imageSize > 20048576) { // 20 MB
+                $message = "Profile Update unsuccessful! Image size is too large (Max 20 MB) ☹️";
+                $_SESSION['message'] = $message;
+                header("Location: ../user/edit-profile.php?error=profile_update_failed");
                 exit();
             }
 
@@ -119,16 +128,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (mysqli_query($conn, $sql)) {
                     echo "Profile picture updated successfully";
                     $_SESSION['profile_picture'] = $destination;
-                    header("location: ../user/profile.php?message=profile_updated");
+
+                    //SUCCESS MESSAGE
+                    $message = "Profile update successful! 😄";
+                    $_SESSION['message'] = $message;
+                    header("location: ../user/profile.php?success=profile_updated");
                     exit();
                 } else {
-                    echo "Error updating profile picture: " . mysqli_error($conn);
+                    $message = "Profile Update unsuccessful! ☹️";
+                    $_SESSION['message'] = $message;
+                    header("Location: ../user/edit-profile.php?error=profile_update_failed");
+                    exit();
                 }
             } else {
-                echo "Error: There was a problem uploading the image.";
+                $message = "Profile Update unsuccessful! ☹️";
+                $_SESSION['message'] = $message;
+                header("Location: ../user/edit-profile.php?error=profile_update_failed");
+                exit();
             }
         } else {
-            echo "Error: No image uploaded!";
+            $message = "Profile update successful! 😄";
+            $_SESSION['message'] = $message;
+            header("location: ../user/profile.php?success=profile_updated");
+            exit();
         }
     }
 }
