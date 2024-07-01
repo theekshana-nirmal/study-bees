@@ -15,14 +15,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $password_hashed = password_hash($password, PASSWORD_DEFAULT); // Hashing the password
-        
+
         // Insert user into the database
         $sql = "INSERT INTO users (first_name, last_name, email, phone_number, psw)
                 VALUES ('$first_name', '$last_name', '$email', '$phone_number', '$password_hashed')";
-    
+
         if (mysqli_query($conn, $sql)) {
             $user_id = mysqli_insert_id($conn); // Get the last inserted user ID
-    
+
             // Handling weak subjects
             if (!empty($_POST['weak_subjects'])) {
                 $weak_subjects = $_POST['weak_subjects'];
@@ -32,18 +32,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                  VALUES ('$user_id', '$subject_id')";
                     mysqli_query($conn, $sql_weak);
                 }
-    
+
                 // Insert strong subjects based on weak subjects
                 $sql_strong = "INSERT INTO user_strong_subjects (user_id, subject_id)
                                SELECT '$user_id', subject_id
                                FROM subjects
                                WHERE subject_id NOT IN (SELECT subject_id FROM user_weak_subjects WHERE user_id = '$user_id')";
-    
+
                 mysqli_query($conn, $sql_strong);
             } else {
-                echo "Please select at least one subject";
+                $message = "⚠️ Oops! It looks like you forgot to select a subject. Please choose at least one subject to continue.";
+                $_SESSION['message'] = $message;
+                header("location: ../auth/register.php?error=registration_failed");
+                exit;
             }
-    
+
             //If Registration is successful! the redirect to login page with saved session
             $_SESSION["registered"] = true;
             if (isset($_SESSION["registered"]) || $_SESSION["registered"] == true) {
@@ -60,10 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
         }
     }
-
 }
 
 mysqli_close($conn);
-
-
-?>
