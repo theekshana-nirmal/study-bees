@@ -12,5 +12,5 @@ if (!empty($resources)) {
         echo "</div>";
     }
 } else {
-    echo "<p>No study resources found for: " . htmlspecialchars($subject_name) . "</p>";
+    echo "<p>📚 Oops! We couldn't find any study resources for: " . htmlspecialchars($subject_name) . "</p>";
 }

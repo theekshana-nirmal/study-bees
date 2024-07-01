@@ -9,12 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone_number = mysqli_real_escape_string($conn, $_POST['phone_number']);
     $user_id = $_SESSION['user_id'];
 
-    echo $first_name . "<br>";
-    echo $last_name . "<br>";
-    echo $email . "<br>";
-    echo $phone_number . "<br>";
-    echo $user_id . "<br>";
-
     //Check password
     if (isset($_POST['password']) && isset($_POST['confirm_password']) && $_POST['password'] != $_POST['confirm_password']) {
         $message = "❌ Oops! The passwords don't match. Please try again.";
@@ -24,7 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $password_hashed = password_hash($password, PASSWORD_DEFAULT); // Hashing the password
-        echo "Hashed password = " . $password_hashed . "<br>";
     }
 
     //  Update basic User data in the database
@@ -124,11 +117,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Move the uploaded file to the destination folder
             if (move_uploaded_file($imageTmpName, $destination)) {
-                echo "Image uploaded successfully!";
                 // Update the profile picture in the database
                 $sql = "UPDATE users SET profile_picture = '$destination' WHERE user_id = '$user_id'";
                 if (mysqli_query($conn, $sql)) {
-                    echo "🎉 Profile updated successfully! 😄";
                     $_SESSION['profile_picture'] = $destination;
 
                     //SUCCESS MESSAGE

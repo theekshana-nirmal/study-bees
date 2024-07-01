@@ -10,8 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //Check password
     if (isset($_POST['password']) && isset($_POST['confirm_password']) && $_POST['password'] != $_POST['confirm_password']) {
-        echo "Passwords do not match.";
-        exit();
+        $message = "🔑 Oops! The passwords you entered don't match. Double-check and try again..";
+        $_SESSION['message'] = $message;
+        header("location: ../auth/register.php?error=registration_failed");
+        exit;
     } else {
         $password = mysqli_real_escape_string($conn, $_POST['password']);
         $password_hashed = password_hash($password, PASSWORD_DEFAULT); // Hashing the password
