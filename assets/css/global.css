@@ -374,3 +374,9 @@ form .txt-color-danger {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary);
 }
+
+
+input:disabled {
+  background-color: rgba(215, 215, 215, 0.35);
+  color: var(--color-low);
+}

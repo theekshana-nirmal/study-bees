@@ -66,8 +66,8 @@
                         <input type="email" name="email" required>
                     </div>
                     <div class="input-group">
-                        <label>Phone Number</label>
-                        <input type="tel" name="phone_number">
+                        <label>Phone Number<span class="txt-color-danger">*</span></label>
+                        <input type="tel" name="phone_number" required>
                     </div>
                     <div class="input-group">
                         <label>Password<span class="txt-color-danger">*</span></label>

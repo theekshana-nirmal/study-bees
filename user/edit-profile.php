@@ -68,6 +68,9 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <h2><?php echo $full_name; ?></h2>
                             </div>
                         </div>
+                        <!-- Display message -->
+                        <?php include '../actions/act_messages.php'; ?>
+
                         <div class="user-buttons">
                             <a href="profile.php" class="btn-primary"><i class="icon-reply"></i> Back</a>
                             <a href="../auth/logout.php" class="btn-danger"><i class="icon-logout"></i> Log out</a>
@@ -105,10 +108,10 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                         <div class="input-group">
                             <label>Email<span class="txt-color-danger">*</span></label>
-                            <input type="email" name="email" required value="<?php echo $email ?>">
+                            <input type="email" name="email" disabled required value="<?php echo $email ?>">
                         </div>
                         <div class="input-group">
-                            <label>Phone Number</label>
+                            <label>Phone Number<span class="txt-color-danger">*</span></label>
                             <input type="tel" name="phone_number" required value="<?php echo $phone_number ?>">
                         </div>
                         <div class="input-group">

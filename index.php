@@ -72,7 +72,7 @@
             </div>
             <div class="row-bottom">
 
-                <!-- Carousel Goes Here-->
+                <!-- Carousel -->
                 <div class="carousel">
                     <a class="prev">
                         <i class="icon-angle-circled-left"></i>

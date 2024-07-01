@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $_SESSION['profile_picture'] = $destination;
 
                     //SUCCESS MESSAGE
-                    $message = "Profile update successful! 😄";
+                    $message = "👏 Success! Profile updated successfully! Looking good! 😄";
                     $_SESSION['message'] = $message;
                     header("location: ../user/profile.php?success=profile_updated");
                     exit();
@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
             }
         } else {
-            $message = "Profile update successful! 😄";
+            $message = "👏 Success! Profile updated successfully! Looking good! 😄";
             $_SESSION['message'] = $message;
             header("location: ../user/profile.php?success=profile_updated");
             exit();
