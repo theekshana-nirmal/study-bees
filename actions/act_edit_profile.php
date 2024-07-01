@@ -17,7 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //Check password
     if (isset($_POST['password']) && isset($_POST['confirm_password']) && $_POST['password'] != $_POST['confirm_password']) {
-        echo "Passwords do not match.";
+        $message = "❌ Oops! The passwords don't match. Please try again.";
+        $_SESSION['message'] = $message;
+        header("Location: ../user/edit-profile.php?error=profile_update_failed");
         exit();
     } else {
         $password = mysqli_real_escape_string($conn, $_POST['password']);
@@ -30,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_query($conn, $sql)) {
     } else {
-        $message = "Profile Update unsuccessful! ☹️";
+        $message = "😞 Oh no! Profile update failed. Please try again.";
         $_SESSION['message'] = $message;
         header("Location: ../user/edit-profile.php?error=profile_update_failed");
         exit();
@@ -57,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                   VALUES ('$user_id', '$subject_id')";
                 if (mysqli_query($conn, $sql_weak)) {
                 } else {
-                    $message = "Profile Update unsuccessful! ☹️";
+                    $message = "😞 Oh no! Profile update failed. Please try again.";
                     $_SESSION['message'] = $message;
                     header("Location: ../user/edit-profile.php?error=profile_update_failed");
                     exit();
@@ -71,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 WHERE subject_id NOT IN (SELECT subject_id FROM user_weak_subjects WHERE user_id = '$user_id')";
             if (mysqli_query($conn, $sql_strong)) {
             } else {
-                $message = "Profile Update unsuccessful! ☹️";
+                $message = "😞 Oh no! Profile update failed. Please try again.";
                 $_SESSION['message'] = $message;
                 header("Location: ../user/edit-profile.php?error=profile_update_failed");
                 exit();
@@ -100,7 +102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Validate image extension
             if (!in_array($imageExtension, $allowedExtensions)) {
-                $message = "Profile Update unsuccessful! Please select an image file - jpg, jpeg, png, gif allowed ☹️";
+                $message = "😞 Invalid image file! Please upload a jpg, jpeg, png, or gif.";
                 $_SESSION['message'] = $message;
                 header("Location: ../user/edit-profile.php?error=profile_update_failed");
                 exit();
@@ -108,7 +110,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Validate image size (optional)
             if ($imageSize > 20048576) { // 20 MB
-                $message = "Profile Update unsuccessful! Image size is too large (Max 20 MB) ☹️";
+                $message = "😞 Image size too large! Max 20 MB allowed.";
                 $_SESSION['message'] = $message;
                 header("Location: ../user/edit-profile.php?error=profile_update_failed");
                 exit();
@@ -126,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Update the profile picture in the database
                 $sql = "UPDATE users SET profile_picture = '$destination' WHERE user_id = '$user_id'";
                 if (mysqli_query($conn, $sql)) {
-                    echo "Profile picture updated successfully";
+                    echo "🎉 Profile updated successfully! 😄";
                     $_SESSION['profile_picture'] = $destination;
 
                     //SUCCESS MESSAGE
@@ -135,13 +137,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     header("location: ../user/profile.php?success=profile_updated");
                     exit();
                 } else {
-                    $message = "Profile Update unsuccessful! ☹️";
+                    $message = "😞 Oh no! Profile update failed. Please try again.";
                     $_SESSION['message'] = $message;
                     header("Location: ../user/edit-profile.php?error=profile_update_failed");
                     exit();
                 }
             } else {
-                $message = "Profile Update unsuccessful! ☹️";
+                $message = "😞 Oh no! Profile update failed. Please try again.";
                 $_SESSION['message'] = $message;
                 header("Location: ../user/edit-profile.php?error=profile_update_failed");
                 exit();

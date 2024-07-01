@@ -47,14 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             //If Registration is successful! the redirect to login page with saved session
             $_SESSION["registered"] = true;
             if (isset($_SESSION["registered"]) || $_SESSION["registered"] == true) {
-                $message = "Congratulations! 🎉 You have successfully registered. Please login to continue.";
+                $message = "Congratulations! 🎉 You've joined the Study Bees platform! Log in and partner up with fellow learners to achieve your academic goals together! 💡🤓";
                 $_SESSION['message'] = $message;
                 header("location: ../auth/login.php?success=registration_successful");
                 exit;
             }
         } else {
             //If Registration is not successful! the redirect to register page with error message
-            $message = "Registration failed! Please try again.";
+            $message = "😞 Uh-oh! Something went wrong. Please try registering again and be part of our learning family! 🌟";
             $_SESSION['message'] = $message;
             header("location: ../auth/register.php?error=registration_failed");
             exit;

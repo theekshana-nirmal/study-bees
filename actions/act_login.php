@@ -40,14 +40,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         } else {
             // Invalid password
-            $message = "Invalid email or password. Please try again. If you don't have an account, please <a href='register.php' class='txt-color-primary'>register</a> first.";
+            $message = "🚫 Oops! Invalid email or password. Please try again. If you don't have an account, please <a href='register.php' class='txt-color-primary'>sign up here</a> to join our community!";
             $_SESSION['message'] = $message;
             header("Location: ../auth/login.php?error=InvalidPassword");
             exit();
         }
     } else {
         // No user found with that email
-        $message = "User not found. If you don't have an account, please <a href='register.php' class='txt-color-primary'>register</a> first.";
+        $message = "🔍 User not found! If you don't have an account, please <a href='register.php' class='txt-color-primary'>sign up here</a> to get started!";
         $_SESSION['message'] = $message;
         header("Location: ../auth/login.php?error=UserNotFound");
         exit();
