@@ -108,7 +108,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                         <div class="input-group">
                             <label>Email<span class="txt-color-danger">*</span></label>
-                            <input type="email" name="email" disabled required value="<?php echo $email ?>">
+                            <input type="email" name="email" required value="<?php echo $email ?>">
                         </div>
                         <div class="input-group">
                             <label>Phone Number<span class="txt-color-danger">*</span></label>
