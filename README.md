@@ -125,7 +125,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Project Team Members:**
   - P.G.Theekshana Nirmal Bandara ([Profile](https://github.com/theekshana-nirmal))
   - G.Nimna Kshithija ([Profile](https://github.com/Nimna92))
-  - D.M.Janith Navodya Dasanayaka
+  - D.M.Janith Navodya Dasanayaka ([Profile](https://github.com/janith-navodya))
   - T.A.Vithanage
   - K.A. Sajani Nimeshika
 
