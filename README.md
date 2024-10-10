@@ -1,6 +1,6 @@
 # Study Bees: Study Partner Finding Platform
 
-![Study Bees Logo](https://studybees.webeauna.com/assets/images/logo/logo-light.png)
+![Study Bees Logo](assets/images/logo/logo-primary.png)
 
 ## Overview
 
